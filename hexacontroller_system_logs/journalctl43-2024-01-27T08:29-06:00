@@ -1,0 +1,343 @@
+-- Logs begin at Wed 1969-12-31 18:00:11 CST. --
+Dec 31 18:07:06 localhost sshd[3871]: Received disconnect from 192.168.1.95 port 49362:11: disconnected by user
+Dec 31 18:07:06 localhost sshd[3871]: Disconnected from 192.168.1.95 port 49362
+Dec 31 18:07:06 localhost sshd[3869]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Dec 31 18:07:06 localhost systemd-logind[3093]: Removed session 3.
+Dec 31 18:07:07 localhost sshd[3867]: Address 192.168.1.251 maps to jsw-laptop, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+Dec 31 18:07:07 localhost sshd[3867]: pam_unix(sshd:account): account jsw has password changed in future
+Dec 31 18:07:07 localhost sshd[3867]: Accepted publickey for jsw from 192.168.1.251 port 51208 ssh2: RSA SHA256:v9kNwDRnjO8PWMtAeWrWydm7PTDD1/xI6NaQxvgo65M
+Dec 31 18:07:07 localhost systemd[1]: Started Session 4 of user jsw.
+Dec 31 18:07:07 localhost systemd-logind[3093]: New session 4 of user jsw.
+Dec 31 18:07:07 localhost sshd[3867]: pam_unix(sshd:session): session opened for user jsw by (uid=0)
+Dec 31 18:07:29 localhost sshd[3894]: Address 192.168.1.251 maps to jsw-laptop, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+Dec 31 18:07:29 localhost sshd[3894]: pam_unix(sshd:account): account jsw has password changed in future
+Dec 31 18:07:29 localhost sshd[3894]: Accepted publickey for jsw from 192.168.1.251 port 36050 ssh2: RSA SHA256:v9kNwDRnjO8PWMtAeWrWydm7PTDD1/xI6NaQxvgo65M
+Dec 31 18:07:29 localhost systemd[1]: Started Session 5 of user jsw.
+Dec 31 18:07:29 localhost systemd-logind[3093]: New session 5 of user jsw.
+Dec 31 18:07:29 localhost sshd[3894]: pam_unix(sshd:session): session opened for user jsw by (uid=0)
+Dec 31 18:07:33 localhost ntpd_intres[3100]: DNS 0.centos.pool.ntp.org -> 69.89.207.199
+Dec 31 18:07:40 localhost ntpd[3099]: 0.0.0.0 c61c 0c clock_step +1706365329.889351 s
+Jan 27 08:29:50 localhost ntpd[3099]: 0.0.0.0 c614 04 freq_mode
+Jan 27 08:29:50 localhost systemd[1]: Time has been changed
+Jan 27 08:29:50 localhost rsyslogd[3390]: imjournal: journal reloaded... [v8.24.0-57.el7_9.1 try http://www.rsyslog.com/e/0 ]
+Jan 27 08:29:51 localhost ntpd[3099]: 0.0.0.0 c618 08 no_sys_peer
+Jan 27 08:29:51 localhost ntpd_intres[3100]: DNS 1.centos.pool.ntp.org -> 45.79.111.167
+Jan 27 08:29:59 localhost ntpd_intres[3100]: DNS 2.centos.pool.ntp.org -> 73.193.62.54
+Jan 27 08:30:07 localhost ntpd_intres[3100]: DNS 3.centos.pool.ntp.org -> 51.81.226.229
+Jan 27 08:37:57 localhost systemd[1]: Starting Cleanup of Temporary Directories...
+Jan 27 08:37:57 localhost systemd[1]: Started Cleanup of Temporary Directories.
+Jan 27 08:44:55 localhost ntpd[3099]: 0.0.0.0 c612 02 freq_set kernel -1.309 PPM
+Jan 27 08:44:55 localhost ntpd[3099]: 0.0.0.0 c615 05 clock_sync
+Jan 27 08:46:01 localhost sshd[3958]: Accepted password for HGCAL_dev from 192.168.1.95 port 49570 ssh2
+Jan 27 08:46:01 localhost systemd[1]: Started Session 6 of user HGCAL_dev.
+Jan 27 08:46:01 localhost systemd-logind[3093]: New session 6 of user HGCAL_dev.
+Jan 27 08:46:01 localhost sshd[3958]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 08:46:02 localhost sshd[3960]: Received disconnect from 192.168.1.95 port 49570:11: disconnected by user
+Jan 27 08:46:02 localhost sshd[3960]: Disconnected from 192.168.1.95 port 49570
+Jan 27 08:46:02 localhost sshd[3958]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 08:46:02 localhost systemd-logind[3093]: Removed session 6.
+Jan 27 08:53:55 localhost sshd[3989]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 57584 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 08:53:55 localhost systemd[1]: Started Session 7 of user HGCAL_dev.
+Jan 27 08:53:55 localhost systemd-logind[3093]: New session 7 of user HGCAL_dev.
+Jan 27 08:53:55 localhost sshd[3989]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 08:53:56 localhost sshd[3991]: Received disconnect from 192.168.1.91 port 57584:11: disconnected by user
+Jan 27 08:53:56 localhost sshd[3991]: Disconnected from 192.168.1.91 port 57584
+Jan 27 08:53:56 localhost sshd[3989]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 08:53:56 localhost systemd-logind[3093]: Removed session 7.
+Jan 27 09:01:01 localhost systemd[1]: Created slice User Slice of root.
+Jan 27 09:01:01 localhost systemd[1]: Started Session 8 of user root.
+Jan 27 09:01:01 localhost CROND[4018]: (root) CMD (run-parts /etc/cron.hourly)
+Jan 27 09:01:01 localhost run-parts(/etc/cron.hourly)[4021]: starting 0anacron
+Jan 27 09:01:01 localhost anacron[4027]: Anacron started on 2024-01-27
+Jan 27 09:01:01 localhost run-parts(/etc/cron.hourly)[4029]: finished 0anacron
+Jan 27 09:01:01 localhost anacron[4027]: Will run job `cron.daily' in 39 min.
+Jan 27 09:01:01 localhost anacron[4027]: Jobs will be executed sequentially
+Jan 27 09:01:42 localhost sshd[4031]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 57639 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 09:01:42 localhost systemd[1]: Started Session 9 of user HGCAL_dev.
+Jan 27 09:01:42 localhost systemd-logind[3093]: New session 9 of user HGCAL_dev.
+Jan 27 09:01:42 localhost sshd[4031]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 09:01:43 localhost sshd[4035]: Received disconnect from 192.168.1.91 port 57639:11: disconnected by user
+Jan 27 09:01:43 localhost sshd[4035]: Disconnected from 192.168.1.91 port 57639
+Jan 27 09:01:43 localhost sshd[4031]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 09:01:43 localhost systemd-logind[3093]: Removed session 9.
+Jan 27 09:01:51 localhost sshd[4033]: Accepted password for HGCAL_dev from 192.168.1.95 port 49625 ssh2
+Jan 27 09:01:51 localhost systemd[1]: Started Session 10 of user HGCAL_dev.
+Jan 27 09:01:51 localhost systemd-logind[3093]: New session 10 of user HGCAL_dev.
+Jan 27 09:01:51 localhost sshd[4033]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 09:01:51 localhost sshd[4048]: Received disconnect from 192.168.1.95 port 49625:11: disconnected by user
+Jan 27 09:01:51 localhost sshd[4048]: Disconnected from 192.168.1.95 port 49625
+Jan 27 09:01:51 localhost sshd[4033]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 09:01:51 localhost systemd-logind[3093]: Removed session 10.
+Jan 27 09:19:05 localhost sshd[3641]: Received disconnect from 192.168.1.95 port 49336:11: disconnected by user
+Jan 27 09:19:05 localhost sshd[3641]: Disconnected from 192.168.1.95 port 49336
+Jan 27 09:19:05 localhost sshd[3639]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 09:19:05 localhost systemd-logind[3093]: Removed session 1.
+Jan 27 09:19:05 localhost systemd[1]: Removed slice User Slice of HGCAL_dev.
+Jan 27 09:20:08 localhost sshd[4066]: Accepted password for HGCAL_dev from 192.168.1.95 port 49761 ssh2
+Jan 27 09:20:08 localhost systemd[1]: Created slice User Slice of HGCAL_dev.
+Jan 27 09:20:08 localhost systemd-logind[3093]: New session 11 of user HGCAL_dev.
+Jan 27 09:20:08 localhost systemd[1]: Started Session 11 of user HGCAL_dev.
+Jan 27 09:20:08 localhost sshd[4066]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 09:28:32 localhost sshd[4119]: Accepted password for HGCAL_dev from 192.168.1.95 port 49789 ssh2
+Jan 27 09:28:32 localhost systemd-logind[3093]: New session 12 of user HGCAL_dev.
+Jan 27 09:28:32 localhost systemd[1]: Started Session 12 of user HGCAL_dev.
+Jan 27 09:28:32 localhost sshd[4119]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 09:28:33 localhost sshd[4121]: Received disconnect from 192.168.1.95 port 49789:11: disconnected by user
+Jan 27 09:28:33 localhost sshd[4121]: Disconnected from 192.168.1.95 port 49789
+Jan 27 09:28:33 localhost sshd[4119]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 09:28:33 localhost systemd-logind[3093]: Removed session 12.
+Jan 27 09:40:01 localhost anacron[4027]: Job `cron.daily' started
+Jan 27 09:40:01 localhost run-parts(/etc/cron.daily)[4149]: starting logrotate
+Jan 27 09:40:01 localhost logrotate[4153]: ALERT exited abnormally with [1]
+Jan 27 09:40:01 localhost run-parts(/etc/cron.daily)[4155]: finished logrotate
+Jan 27 09:40:01 localhost run-parts(/etc/cron.daily)[4157]: starting man-db.cron
+Jan 27 09:40:03 localhost run-parts(/etc/cron.daily)[4167]: finished man-db.cron
+Jan 27 09:40:03 localhost run-parts(/etc/cron.daily)[4169]: starting mlocate
+Jan 27 09:40:12 localhost run-parts(/etc/cron.daily)[4180]: finished mlocate
+Jan 27 09:40:12 localhost anacron[4027]: Job `cron.daily' terminated (produced output)
+Jan 27 09:40:13 localhost anacron[4027]: Normal exit (1 job run)
+Jan 27 09:40:13 localhost systemd[1]: Removed slice User Slice of root.
+Jan 27 09:40:13 localhost postfix/pickup[3910]: 37F03A0EB7: uid=0 from=<root>
+Jan 27 09:40:13 localhost postfix/cleanup[4183]: 37F03A0EB7: message-id=<20240127154013.37F03A0EB7@localhost.localdomain>
+Jan 27 09:40:13 localhost postfix/qmgr[3476]: 37F03A0EB7: from=<root@localhost.localdomain>, size=530, nrcpt=1 (queue active)
+Jan 27 09:40:13 localhost postfix/local[4188]: 37F03A0EB7: to=<root@localhost.localdomain>, orig_to=<root>, relay=local, delay=0.39, delays=0.17/0.2/0/0.02, dsn=2.0.0, status=sent (delivered to mailbox)
+Jan 27 09:40:13 localhost postfix/qmgr[3476]: 37F03A0EB7: removed
+Jan 27 09:40:22 localhost sshd[4177]: Accepted password for HGCAL_dev from 192.168.1.95 port 49815 ssh2
+Jan 27 09:40:22 localhost systemd[1]: Started Session 13 of user HGCAL_dev.
+Jan 27 09:40:22 localhost systemd-logind[3093]: New session 13 of user HGCAL_dev.
+Jan 27 09:40:22 localhost sshd[4177]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 09:40:23 localhost sshd[4189]: Received disconnect from 192.168.1.95 port 49815:11: disconnected by user
+Jan 27 09:40:23 localhost sshd[4189]: Disconnected from 192.168.1.95 port 49815
+Jan 27 09:40:23 localhost sshd[4177]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 09:40:23 localhost systemd-logind[3093]: Removed session 13.
+Jan 27 10:01:01 localhost systemd[1]: Created slice User Slice of root.
+Jan 27 10:01:01 localhost systemd[1]: Started Session 14 of user root.
+Jan 27 10:01:01 localhost CROND[4220]: (root) CMD (run-parts /etc/cron.hourly)
+Jan 27 10:01:01 localhost run-parts(/etc/cron.hourly)[4223]: starting 0anacron
+Jan 27 10:01:01 localhost run-parts(/etc/cron.hourly)[4229]: finished 0anacron
+Jan 27 10:01:01 localhost systemd[1]: Removed slice User Slice of root.
+Jan 27 10:05:33 localhost sshd[4242]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.95  user=HGCAL_dev
+Jan 27 10:05:35 localhost sshd[4242]: Failed password for HGCAL_dev from 192.168.1.95 port 49887 ssh2
+Jan 27 10:05:39 localhost sshd[4242]: Accepted password for HGCAL_dev from 192.168.1.95 port 49887 ssh2
+Jan 27 10:05:39 localhost systemd[1]: Started Session 15 of user HGCAL_dev.
+Jan 27 10:05:39 localhost systemd-logind[3093]: New session 15 of user HGCAL_dev.
+Jan 27 10:05:39 localhost sshd[4242]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 10:05:41 localhost sshd[4246]: Received disconnect from 192.168.1.95 port 49887:11: disconnected by user
+Jan 27 10:05:41 localhost sshd[4246]: Disconnected from 192.168.1.95 port 49887
+Jan 27 10:05:41 localhost sshd[4242]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 10:05:41 localhost systemd-logind[3093]: Removed session 15.
+Jan 27 10:05:47 localhost sshd[4244]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 58278 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 10:05:47 localhost systemd[1]: Started Session 16 of user HGCAL_dev.
+Jan 27 10:05:47 localhost systemd-logind[3093]: New session 16 of user HGCAL_dev.
+Jan 27 10:05:47 localhost sshd[4244]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 10:05:48 localhost sshd[4259]: Received disconnect from 192.168.1.91 port 58278:11: disconnected by user
+Jan 27 10:05:48 localhost sshd[4259]: Disconnected from 192.168.1.91 port 58278
+Jan 27 10:05:48 localhost sshd[4244]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 10:05:49 localhost systemd-logind[3093]: Removed session 16.
+Jan 27 10:33:30 localhost sshd[4307]: Accepted password for HGCAL_dev from 192.168.1.95 port 49978 ssh2
+Jan 27 10:33:30 localhost systemd-logind[3093]: New session 17 of user HGCAL_dev.
+Jan 27 10:33:30 localhost systemd[1]: Started Session 17 of user HGCAL_dev.
+Jan 27 10:33:30 localhost sshd[4307]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 10:33:32 localhost sshd[4309]: Received disconnect from 192.168.1.95 port 49978:11: disconnected by user
+Jan 27 10:33:32 localhost sshd[4309]: Disconnected from 192.168.1.95 port 49978
+Jan 27 10:33:32 localhost sshd[4307]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 10:33:32 localhost systemd-logind[3093]: Removed session 17.
+Jan 27 10:40:45 localhost sshd[4335]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 58621 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 10:40:45 localhost systemd[1]: Started Session 18 of user HGCAL_dev.
+Jan 27 10:40:45 localhost systemd-logind[3093]: New session 18 of user HGCAL_dev.
+Jan 27 10:40:45 localhost sshd[4335]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 10:40:47 localhost sshd[4337]: Received disconnect from 192.168.1.91 port 58621:11: disconnected by user
+Jan 27 10:40:47 localhost sshd[4337]: Disconnected from 192.168.1.91 port 58621
+Jan 27 10:40:47 localhost sshd[4335]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 10:40:47 localhost systemd-logind[3093]: Removed session 18.
+Jan 27 10:40:49 localhost sshd[4333]: Accepted password for HGCAL_dev from 192.168.1.95 port 49999 ssh2
+Jan 27 10:40:49 localhost systemd-logind[3093]: New session 19 of user HGCAL_dev.
+Jan 27 10:40:49 localhost systemd[1]: Started Session 19 of user HGCAL_dev.
+Jan 27 10:40:49 localhost sshd[4333]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 10:40:53 localhost sshd[4350]: Received disconnect from 192.168.1.95 port 49999:11: disconnected by user
+Jan 27 10:40:53 localhost sshd[4350]: Disconnected from 192.168.1.95 port 49999
+Jan 27 10:40:53 localhost sshd[4333]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 10:40:53 localhost systemd-logind[3093]: Removed session 19.
+Jan 27 10:48:45 localhost sshd[4374]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.95  user=HGCAL_dev
+Jan 27 10:48:47 localhost sshd[4374]: Failed password for HGCAL_dev from 192.168.1.95 port 50016 ssh2
+Jan 27 10:48:53 localhost sshd[4374]: Accepted password for HGCAL_dev from 192.168.1.95 port 50016 ssh2
+Jan 27 10:48:53 localhost systemd[1]: Started Session 20 of user HGCAL_dev.
+Jan 27 10:48:53 localhost systemd-logind[3093]: New session 20 of user HGCAL_dev.
+Jan 27 10:48:53 localhost sshd[4374]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 10:48:56 localhost sshd[4377]: Received disconnect from 192.168.1.95 port 50016:11: disconnected by user
+Jan 27 10:48:56 localhost sshd[4377]: Disconnected from 192.168.1.95 port 50016
+Jan 27 10:48:56 localhost sshd[4374]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 10:48:56 localhost systemd-logind[3093]: Removed session 20.
+Jan 27 10:49:07 localhost sshd[4390]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 58720 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 10:49:07 localhost systemd[1]: Started Session 21 of user HGCAL_dev.
+Jan 27 10:49:07 localhost systemd-logind[3093]: New session 21 of user HGCAL_dev.
+Jan 27 10:49:07 localhost sshd[4390]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 10:49:08 localhost sshd[4392]: Received disconnect from 192.168.1.91 port 58720:11: disconnected by user
+Jan 27 10:49:08 localhost sshd[4392]: Disconnected from 192.168.1.91 port 58720
+Jan 27 10:49:08 localhost sshd[4390]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 10:49:08 localhost systemd-logind[3093]: Removed session 21.
+Jan 27 11:01:01 localhost systemd[1]: Created slice User Slice of root.
+Jan 27 11:01:01 localhost systemd[1]: Started Session 22 of user root.
+Jan 27 11:01:01 localhost CROND[4416]: (root) CMD (run-parts /etc/cron.hourly)
+Jan 27 11:01:01 localhost run-parts(/etc/cron.hourly)[4419]: starting 0anacron
+Jan 27 11:01:01 localhost run-parts(/etc/cron.hourly)[4425]: finished 0anacron
+Jan 27 11:01:01 localhost systemd[1]: Removed slice User Slice of root.
+Jan 27 11:06:33 localhost sshd[4475]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 58886 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 11:06:33 localhost systemd[1]: Started Session 23 of user HGCAL_dev.
+Jan 27 11:06:33 localhost systemd-logind[3093]: New session 23 of user HGCAL_dev.
+Jan 27 11:06:33 localhost sshd[4475]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 11:06:35 localhost sshd[4477]: Received disconnect from 192.168.1.91 port 58886:11: disconnected by user
+Jan 27 11:06:35 localhost sshd[4477]: Disconnected from 192.168.1.91 port 58886
+Jan 27 11:06:35 localhost sshd[4475]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 11:06:35 localhost systemd-logind[3093]: Removed session 23.
+Jan 27 11:07:11 localhost sshd[4490]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.95  user=HGCAL_dev
+Jan 27 11:07:13 localhost sshd[4490]: Failed password for HGCAL_dev from 192.168.1.95 port 50061 ssh2
+Jan 27 11:07:17 localhost sshd[4490]: Accepted password for HGCAL_dev from 192.168.1.95 port 50061 ssh2
+Jan 27 11:07:17 localhost systemd-logind[3093]: New session 24 of user HGCAL_dev.
+Jan 27 11:07:17 localhost systemd[1]: Started Session 24 of user HGCAL_dev.
+Jan 27 11:07:17 localhost sshd[4490]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 11:07:21 localhost sshd[4493]: Received disconnect from 192.168.1.95 port 50061:11: disconnected by user
+Jan 27 11:07:21 localhost sshd[4493]: Disconnected from 192.168.1.95 port 50061
+Jan 27 11:07:21 localhost sshd[4490]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 11:07:21 localhost systemd-logind[3093]: Removed session 24.
+Jan 27 11:32:36 localhost sshd[4532]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 59125 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 11:32:36 localhost systemd-logind[3093]: New session 25 of user HGCAL_dev.
+Jan 27 11:32:36 localhost systemd[1]: Started Session 25 of user HGCAL_dev.
+Jan 27 11:32:36 localhost sshd[4532]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 11:32:37 localhost sshd[4534]: Received disconnect from 192.168.1.91 port 59125:11: disconnected by user
+Jan 27 11:32:37 localhost sshd[4534]: Disconnected from 192.168.1.91 port 59125
+Jan 27 11:32:37 localhost sshd[4532]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 11:32:37 localhost systemd-logind[3093]: Removed session 25.
+Jan 27 11:32:42 localhost sshd[4530]: Accepted password for HGCAL_dev from 192.168.1.95 port 50152 ssh2
+Jan 27 11:32:42 localhost systemd-logind[3093]: New session 26 of user HGCAL_dev.
+Jan 27 11:32:42 localhost systemd[1]: Started Session 26 of user HGCAL_dev.
+Jan 27 11:32:42 localhost sshd[4530]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 11:32:47 localhost sshd[4548]: Received disconnect from 192.168.1.95 port 50152:11: disconnected by user
+Jan 27 11:32:47 localhost sshd[4548]: Disconnected from 192.168.1.95 port 50152
+Jan 27 11:32:47 localhost sshd[4530]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 11:32:47 localhost systemd-logind[3093]: Removed session 26.
+Jan 27 11:47:39 localhost sshd[4573]: Accepted password for HGCAL_dev from 192.168.1.95 port 50206 ssh2
+Jan 27 11:47:39 localhost systemd[1]: Started Session 27 of user HGCAL_dev.
+Jan 27 11:47:39 localhost systemd-logind[3093]: New session 27 of user HGCAL_dev.
+Jan 27 11:47:39 localhost sshd[4573]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 11:47:44 localhost sshd[4575]: Received disconnect from 192.168.1.95 port 50206:11: disconnected by user
+Jan 27 11:47:44 localhost sshd[4575]: Disconnected from 192.168.1.95 port 50206
+Jan 27 11:47:44 localhost sshd[4573]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 11:47:44 localhost systemd-logind[3093]: Removed session 27.
+Jan 27 11:49:01 localhost sshd[4589]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 59292 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 11:49:01 localhost systemd-logind[3093]: New session 28 of user HGCAL_dev.
+Jan 27 11:49:01 localhost systemd[1]: Started Session 28 of user HGCAL_dev.
+Jan 27 11:49:01 localhost sshd[4589]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 11:49:02 localhost sshd[4591]: Received disconnect from 192.168.1.91 port 59292:11: disconnected by user
+Jan 27 11:49:02 localhost sshd[4591]: Disconnected from 192.168.1.91 port 59292
+Jan 27 11:49:02 localhost sshd[4589]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 11:49:02 localhost systemd-logind[3093]: Removed session 28.
+Jan 27 12:01:01 localhost systemd[1]: Created slice User Slice of root.
+Jan 27 12:01:01 localhost systemd[1]: Started Session 29 of user root.
+Jan 27 12:01:01 localhost CROND[4616]: (root) CMD (run-parts /etc/cron.hourly)
+Jan 27 12:01:01 localhost run-parts(/etc/cron.hourly)[4619]: starting 0anacron
+Jan 27 12:01:01 localhost run-parts(/etc/cron.hourly)[4625]: finished 0anacron
+Jan 27 12:01:01 localhost systemd[1]: Removed slice User Slice of root.
+Jan 27 12:52:44 localhost sshd[4678]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 59866 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 12:52:44 localhost systemd[1]: Started Session 30 of user HGCAL_dev.
+Jan 27 12:52:44 localhost systemd-logind[3093]: New session 30 of user HGCAL_dev.
+Jan 27 12:52:44 localhost sshd[4678]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 12:52:47 localhost sshd[4682]: Received disconnect from 192.168.1.91 port 59866:11: disconnected by user
+Jan 27 12:52:47 localhost sshd[4682]: Disconnected from 192.168.1.91 port 59866
+Jan 27 12:52:47 localhost sshd[4678]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 12:52:47 localhost systemd-logind[3093]: Removed session 30.
+Jan 27 12:52:51 localhost sshd[4680]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.95  user=HGCAL_dev
+Jan 27 12:52:53 localhost sshd[4680]: Failed password for HGCAL_dev from 192.168.1.95 port 50395 ssh2
+Jan 27 12:53:08 localhost sshd[4680]: Accepted password for HGCAL_dev from 192.168.1.95 port 50395 ssh2
+Jan 27 12:53:08 localhost systemd-logind[3093]: New session 31 of user HGCAL_dev.
+Jan 27 12:53:08 localhost systemd[1]: Started Session 31 of user HGCAL_dev.
+Jan 27 12:53:08 localhost sshd[4680]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 12:53:15 localhost sshd[4694]: Received disconnect from 192.168.1.95 port 50395:11: disconnected by user
+Jan 27 12:53:15 localhost sshd[4694]: Disconnected from 192.168.1.95 port 50395
+Jan 27 12:53:15 localhost sshd[4680]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 12:53:15 localhost systemd-logind[3093]: Removed session 31.
+Jan 27 13:01:01 localhost systemd[1]: Created slice User Slice of root.
+Jan 27 13:01:01 localhost systemd[1]: Started Session 32 of user root.
+Jan 27 13:01:01 localhost CROND[4724]: (root) CMD (run-parts /etc/cron.hourly)
+Jan 27 13:01:01 localhost run-parts(/etc/cron.hourly)[4727]: starting 0anacron
+Jan 27 13:01:01 localhost run-parts(/etc/cron.hourly)[4733]: finished 0anacron
+Jan 27 13:01:01 localhost systemd[1]: Removed slice User Slice of root.
+Jan 27 13:14:02 localhost sshd[4758]: Accepted password for HGCAL_dev from 192.168.1.95 port 50458 ssh2
+Jan 27 13:14:02 localhost systemd[1]: Started Session 33 of user HGCAL_dev.
+Jan 27 13:14:02 localhost systemd-logind[3093]: New session 33 of user HGCAL_dev.
+Jan 27 13:14:02 localhost sshd[4758]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 13:14:10 localhost sshd[4760]: Received disconnect from 192.168.1.95 port 50458:11: disconnected by user
+Jan 27 13:14:10 localhost sshd[4760]: Disconnected from 192.168.1.95 port 50458
+Jan 27 13:14:10 localhost sshd[4758]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 13:14:10 localhost systemd-logind[3093]: Removed session 33.
+Jan 27 13:22:05 localhost sshd[4785]: Accepted password for HGCAL_dev from 192.168.1.95 port 50491 ssh2
+Jan 27 13:22:05 localhost systemd[1]: Started Session 34 of user HGCAL_dev.
+Jan 27 13:22:05 localhost systemd-logind[3093]: New session 34 of user HGCAL_dev.
+Jan 27 13:22:05 localhost sshd[4785]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 13:22:13 localhost sshd[4787]: Received disconnect from 192.168.1.95 port 50491:11: disconnected by user
+Jan 27 13:22:13 localhost sshd[4787]: Disconnected from 192.168.1.95 port 50491
+Jan 27 13:22:13 localhost sshd[4785]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 13:22:13 localhost systemd-logind[3093]: Removed session 34.
+Jan 27 13:29:51 localhost sshd[4816]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 60218 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 13:29:51 localhost systemd[1]: Started Session 35 of user HGCAL_dev.
+Jan 27 13:29:51 localhost systemd-logind[3093]: New session 35 of user HGCAL_dev.
+Jan 27 13:29:51 localhost sshd[4816]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 13:29:53 localhost sshd[4818]: Received disconnect from 192.168.1.91 port 60218:11: disconnected by user
+Jan 27 13:29:53 localhost sshd[4818]: Disconnected from 192.168.1.91 port 60218
+Jan 27 13:29:53 localhost sshd[4816]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 13:29:53 localhost systemd-logind[3093]: Removed session 35.
+Jan 27 13:35:25 localhost sshd[4831]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 60279 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 13:35:25 localhost systemd-logind[3093]: New session 36 of user HGCAL_dev.
+Jan 27 13:35:25 localhost systemd[1]: Started Session 36 of user HGCAL_dev.
+Jan 27 13:35:25 localhost sshd[4831]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 13:35:26 localhost sshd[4835]: Received disconnect from 192.168.1.91 port 60279:11: disconnected by user
+Jan 27 13:35:26 localhost sshd[4835]: Disconnected from 192.168.1.91 port 60279
+Jan 27 13:35:26 localhost sshd[4831]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 13:35:26 localhost systemd-logind[3093]: Removed session 36.
+Jan 27 13:35:35 localhost sshd[4833]: Accepted password for HGCAL_dev from 192.168.1.95 port 50528 ssh2
+Jan 27 13:35:35 localhost systemd[1]: Started Session 37 of user HGCAL_dev.
+Jan 27 13:35:35 localhost systemd-logind[3093]: New session 37 of user HGCAL_dev.
+Jan 27 13:35:35 localhost sshd[4833]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 13:35:43 localhost sshd[4848]: Received disconnect from 192.168.1.95 port 50528:11: disconnected by user
+Jan 27 13:35:43 localhost sshd[4848]: Disconnected from 192.168.1.95 port 50528
+Jan 27 13:35:43 localhost sshd[4833]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 13:35:43 localhost systemd-logind[3093]: Removed session 37.
+Jan 27 13:39:14 localhost sshd[4885]: Accepted password for HGCAL_dev from 192.168.1.95 port 50555 ssh2
+Jan 27 13:39:14 localhost systemd[1]: Started Session 38 of user HGCAL_dev.
+Jan 27 13:39:14 localhost systemd-logind[3093]: New session 38 of user HGCAL_dev.
+Jan 27 13:39:14 localhost sshd[4885]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 13:39:22 localhost sshd[4887]: Received disconnect from 192.168.1.95 port 50555:11: disconnected by user
+Jan 27 13:39:22 localhost sshd[4887]: Disconnected from 192.168.1.95 port 50555
+Jan 27 13:39:22 localhost sshd[4885]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 13:39:22 localhost systemd-logind[3093]: Removed session 38.
+Jan 27 13:47:26 localhost sshd[4910]: Accepted password for HGCAL_dev from 192.168.1.95 port 50580 ssh2
+Jan 27 13:47:26 localhost systemd-logind[3093]: New session 39 of user HGCAL_dev.
+Jan 27 13:47:26 localhost systemd[1]: Started Session 39 of user HGCAL_dev.
+Jan 27 13:47:26 localhost sshd[4910]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 13:47:35 localhost sshd[4913]: Received disconnect from 192.168.1.95 port 50580:11: disconnected by user
+Jan 27 13:47:35 localhost sshd[4913]: Disconnected from 192.168.1.95 port 50580
+Jan 27 13:47:35 localhost sshd[4910]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 13:47:35 localhost systemd-logind[3093]: Removed session 39.
+Jan 27 13:53:09 localhost sshd[4938]: Accepted password for HGCAL_dev from 192.168.1.95 port 50591 ssh2
+Jan 27 13:53:09 localhost systemd-logind[3093]: New session 40 of user HGCAL_dev.
+Jan 27 13:53:09 localhost systemd[1]: Started Session 40 of user HGCAL_dev.
+Jan 27 13:53:09 localhost sshd[4938]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 13:53:17 localhost sshd[4940]: Received disconnect from 192.168.1.95 port 50591:11: disconnected by user
+Jan 27 13:53:17 localhost sshd[4940]: Disconnected from 192.168.1.95 port 50591
+Jan 27 13:53:17 localhost sshd[4938]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 13:53:17 localhost systemd-logind[3093]: Removed session 40.
+Jan 27 13:55:49 localhost sshd[4954]: Accepted publickey for HGCAL_dev from 192.168.1.91 port 60458 ssh2: ED25519 SHA256:1Zh1ByRc4f9wahkTbpIm/wRqph//al8Sq9I7yCN9xOk
+Jan 27 13:55:49 localhost systemd[1]: Started Session 41 of user HGCAL_dev.
+Jan 27 13:55:49 localhost systemd-logind[3093]: New session 41 of user HGCAL_dev.
+Jan 27 13:55:49 localhost sshd[4954]: pam_unix(sshd:session): session opened for user HGCAL_dev by (uid=0)
+Jan 27 13:55:52 localhost sshd[4956]: Received disconnect from 192.168.1.91 port 60458:11: disconnected by user
+Jan 27 13:55:52 localhost sshd[4956]: Disconnected from 192.168.1.91 port 60458
+Jan 27 13:55:52 localhost sshd[4954]: pam_unix(sshd:session): session closed for user HGCAL_dev
+Jan 27 13:55:52 localhost systemd-logind[3093]: Removed session 41.
+Jan 27 14:01:01 localhost systemd[1]: Created slice User Slice of root.
+Jan 27 14:01:01 localhost systemd[1]: Started Session 42 of user root.
+Jan 27 14:01:01 localhost CROND[5010]: (root) CMD (run-parts /etc/cron.hourly)
+Jan 27 14:01:01 localhost run-parts(/etc/cron.hourly)[5013]: starting 0anacron
+Jan 27 14:01:01 localhost run-parts(/etc/cron.hourly)[5019]: finished 0anacron
+Jan 27 14:01:01 localhost systemd[1]: Removed slice User Slice of root.
+Jan 27 14:11:29 localhost ntpd[3099]: 0.0.0.0 0618 08 no_sys_peer

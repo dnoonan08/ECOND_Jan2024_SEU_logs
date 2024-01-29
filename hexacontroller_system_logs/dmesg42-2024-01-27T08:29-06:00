@@ -1,0 +1,2040 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.000000] Linux version 4.19.0-xilinx-v2019.2 (oe-user@oe-host) (gcc version 8.2.0 (GCC)) #1 SMP Tue Jun 23 17:47:57 UTC 2020
+[    0.000000] Machine model: xlnx,zynqmp
+[    0.000000] earlycon: cdns0 at MMIO 0x00000000ff000000 (options '115200n8')
+[    0.000000] bootconsole [cdns0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 256 MiB at 0x000000006fc00000
+[    0.000000] On node 0 totalpages: 524032
+[    0.000000]   DMA32 zone: 7165 pages used for memmap
+[    0.000000]   DMA32 zone: 0 pages reserved
+[    0.000000]   DMA32 zone: 524032 pages, LIFO batch:63
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] random: get_random_bytes called from start_kernel+0x94/0x3f8 with crng_init=0
+[    0.000000] percpu: Embedded 23 pages/cpu @(____ptrval____) s53656 r8192 d32360 u94208
+[    0.000000] pcpu-alloc: s53656 r8192 d32360 u94208 alloc=23*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Speculative Store Bypass Disable mitigation not required
+[    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 516867
+[    0.000000] Kernel command line: earlycon console=ttyPS0,115200 clk_ignore_unused root=/dev/mmcblk1p2 rw rootwait
+[    0.000000] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.000000] Memory: 1783816K/2096128K available (10748K kernel code, 634K rwdata, 5424K rodata, 832K init, 314K bss, 50168K reserved, 262144K cma-reserved)
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=2.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] arch_timer: cp15 timer(s) running at 33.33MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x7b00c47c0, max_idle_ns: 440795202120 ns
+[    0.000003] sched_clock: 56 bits at 33MHz, resolution 30ns, wraps every 2199023255541ns
+[    0.008183] Console: colour dummy device 80x25
+[    0.012389] Calibrating delay loop (skipped), value calculated using timer frequency.. 66.66 BogoMIPS (lpj=133333)
+[    0.022668] pid_max: default: 32768 minimum: 301
+[    0.027349] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.033918] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.041688] ASID allocator initialised with 32768 entries
+[    0.046417] rcu: Hierarchical SRCU implementation.
+[    0.051381] EFI services will not be available.
+[    0.055699] smp: Bringing up secondary CPUs ...
+[    0.060397] Detected VIPT I-cache on CPU1
+[    0.060425] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    0.060481] smp: Brought up 1 node, 2 CPUs
+[    0.074653] SMP: Total of 2 processors activated.
+[    0.079325] CPU features: detected: 32-bit EL0 Support
+[    0.085839] CPU: All CPU(s) started at EL2
+[    0.088501] alternatives: patching kernel code
+[    0.093744] devtmpfs: initialized
+[    0.099834] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.105890] futex hash table entries: 512 (order: 3, 32768 bytes)
+[    0.116896] xor: measuring software checksum speed
+[    0.156005]    8regs     :  2375.000 MB/sec
+[    0.196032]    8regs_prefetch:  2052.000 MB/sec
+[    0.236060]    32regs    :  2725.000 MB/sec
+[    0.276087]    32regs_prefetch:  2309.000 MB/sec
+[    0.276127] xor: using function: 32regs (2725.000 MB/sec)
+[    0.280433] pinctrl core: initialized pinctrl subsystem
+[    0.286272] NET: Registered protocol family 16
+[    0.290296] audit: initializing netlink subsys (disabled)
+[    0.296018] audit: type=2000 audit(0.256:1): state=initialized audit_enabled=0 res=1
+[    0.303121] cpuidle: using governor menu
+[    0.307127] vdso: 2 pages (1 code @ (____ptrval____), 1 data @ (____ptrval____))
+[    0.314344] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.321822] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.346594] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.415363] raid6: int64x1  gen()   447 MB/s
+[    0.483382] raid6: int64x1  xor()   449 MB/s
+[    0.551438] raid6: int64x2  gen()   684 MB/s
+[    0.619461] raid6: int64x2  xor()   598 MB/s
+[    0.687502] raid6: int64x4  gen()   980 MB/s
+[    0.755534] raid6: int64x4  xor()   736 MB/s
+[    0.823623] raid6: int64x8  gen()  1168 MB/s
+[    0.891654] raid6: int64x8  xor()   759 MB/s
+[    0.959760] raid6: neonx1   gen()   736 MB/s
+[    1.027730] raid6: neonx1   xor()   879 MB/s
+[    1.095804] raid6: neonx2   gen()  1129 MB/s
+[    1.163856] raid6: neonx2   xor()  1167 MB/s
+[    1.231892] raid6: neonx4   gen()  1478 MB/s
+[    1.299935] raid6: neonx4   xor()  1412 MB/s
+[    1.368020] raid6: neonx8   gen()  1540 MB/s
+[    1.436038] raid6: neonx8   xor()  1452 MB/s
+[    1.436075] raid6: using algorithm neonx8 gen() 1540 MB/s
+[    1.440028] raid6: .... xor() 1452 MB/s, rmw enabled
+[    1.444960] raid6: using neon recovery algorithm
+[    1.450230] SCSI subsystem initialized
+[    1.453293] libata version 3.00 loaded.
+[    1.453436] usbcore: registered new interface driver usbfs
+[    1.458745] usbcore: registered new interface driver hub
+[    1.464015] usbcore: registered new device driver usb
+[    1.469065] media: Linux media interface: v0.10
+[    1.473525] videodev: Linux video capture interface: v2.00
+[    1.478978] pps_core: LinuxPPS API ver. 1 registered
+[    1.483885] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.492977] PTP clock support registered
+[    1.496877] EDAC MC: Ver: 3.0.0
+[    1.501377] zynqmp-ipi-mbox mailbox@ff990400: Probed ZynqMP IPI Mailbox driver.
+[    1.507439] FPGA manager framework
+[    1.510748] Advanced Linux Sound Architecture Driver Initialized.
+[    1.516939] Bluetooth: Core ver 2.22
+[    1.520228] NET: Registered protocol family 31
+[    1.524628] Bluetooth: HCI device and connection manager initialized
+[    1.530944] Bluetooth: HCI socket layer initialized
+[    1.535786] Bluetooth: L2CAP socket layer initialized
+[    1.540817] Bluetooth: SCO socket layer initialized
+[    1.545981] clocksource: Switched to clocksource arch_sys_counter
+[    1.551777] VFS: Disk quotas dquot_6.6.0
+[    1.555686] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.566736] NET: Registered protocol family 2
+[    1.567116] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes)
+[    1.574563] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    1.581819] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+[    1.588483] TCP: Hash tables configured (established 16384 bind 16384)
+[    1.594834] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    1.600784] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    1.607249] NET: Registered protocol family 1
+[    1.611675] RPC: Registered named UNIX socket transport module.
+[    1.617359] RPC: Registered udp transport module.
+[    1.622027] RPC: Registered tcp transport module.
+[    1.626696] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.633336] PCI: CLS 0 bytes, default 64
+[    1.633703] hw perfevents: no interrupt-affinity property for /pmu, guessing.
+[    1.640290] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    1.648611] Initialise system trusted keyrings
+[    1.652363] workingset: timestamp_bits=62 max_order=19 bucket_order=0
+[    1.659319] NFS: Registering the id_resolver key type
+[    1.663731] Key type id_resolver registered
+[    1.667871] Key type id_legacy registered
+[    1.671855] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.678521] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    2.766020] NET: Registered protocol family 38
+[    2.828223] Key type asymmetric registered
+[    2.828260] Asymmetric key parser 'x509' registered
+[    2.831558] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    2.838886] io scheduler noop registered
+[    2.842786] io scheduler deadline registered
+[    2.847030] io scheduler cfq registered (default)
+[    2.851686] io scheduler mq-deadline registered
+[    2.856183] io scheduler kyber registered
+[    2.889181] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    2.892686] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    2.900017] brd: module loaded
+[    2.903717] loop: module loaded
+[    2.904420] mtdoops: mtd device (mtddev=name/number) must be supplied
+[    2.909704] libphy: Fixed MDIO Bus: probed
+[    2.913739] tun: Universal TUN/TAP device driver, 1.6
+[    2.918008] CAN device driver interface
+[    2.922167] usbcore: registered new interface driver asix
+[    2.926777] usbcore: registered new interface driver ax88179_178a
+[    2.932820] usbcore: registered new interface driver cdc_ether
+[    2.938616] usbcore: registered new interface driver net1080
+[    2.944237] usbcore: registered new interface driver cdc_subset
+[    2.950119] usbcore: registered new interface driver zaurus
+[    2.955666] usbcore: registered new interface driver cdc_ncm
+[    2.961693] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.967745] ehci-pci: EHCI PCI platform driver
+[    2.972378] usbcore: registered new interface driver uas
+[    2.977462] usbcore: registered new interface driver usb-storage
+[    2.983883] rtc_zynqmp ffa60000.rtc: rtc core: registered ffa60000.rtc as rtc0
+[    2.990626] i2c /dev entries driver
+[    2.995434] usbcore: registered new interface driver uvcvideo
+[    2.999748] USB Video Class driver (1.1.1)
+[    3.004289] Bluetooth: HCI UART driver ver 2.3
+[    3.008231] Bluetooth: HCI UART protocol H4 registered
+[    3.013328] Bluetooth: HCI UART protocol BCSP registered
+[    3.018626] Bluetooth: HCI UART protocol LL registered
+[    3.023711] Bluetooth: HCI UART protocol ATH3K registered
+[    3.029087] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[    3.035334] Bluetooth: HCI UART protocol Intel registered
+[    3.040680] Bluetooth: HCI UART protocol QCA registered
+[    3.045882] usbcore: registered new interface driver bcm203x
+[    3.051502] usbcore: registered new interface driver bpa10x
+[    3.057037] usbcore: registered new interface driver bfusb
+[    3.062488] usbcore: registered new interface driver btusb
+[    3.067910] Bluetooth: Generic Bluetooth SDIO driver ver 0.1
+[    3.073575] usbcore: registered new interface driver ath3k
+[    3.079155] EDAC MC: ECC not enabled
+[    3.082661] EDAC DEVICE0: Giving out device to module zynqmp-ocm-edac controller zynqmp_ocm: DEV ff960000.memory-controller (INTERRUPT)
+[    3.095159] sdhci: Secure Digital Host Controller Interface driver
+[    3.100780] sdhci: Copyright(c) Pierre Ossman
+[    3.105103] sdhci-pltfm: SDHCI platform and OF driver helper
+[    3.110972] ledtrig-cpu: registered to indicate activity on CPUs
+[    3.116736] zynqmp_firmware_probe Platform Management API v1.1
+[    3.122493] zynqmp_firmware_probe Trustzone version v1.0
+[    3.150816] zynqmp_clk_mux_get_parent() getparent failed for clock: lpd_wdt, ret = -22
+[    3.153465] alg: No test for xilinx-zynqmp-aes (zynqmp-aes)
+[    3.158648] zynqmp_aes zynqmp_aes: AES Successfully Registered
+
+[    3.166277] alg: No test for xilinx-keccak-384 (zynqmp-keccak-384)
+[    3.172259] alg: No test for xilinx-zynqmp-rsa (zynqmp-rsa)
+[    3.177852] usbcore: registered new interface driver usbhid
+[    3.183190] usbhid: USB HID core driver
+[    3.189125] fpga_manager fpga0: Xilinx ZynqMP FPGA Manager registered
+[    3.193729] usbcore: registered new interface driver snd-usb-audio
+[    3.200318] pktgen: Packet Generator for packet performance testing. Version: 2.75
+[    3.207330] Initializing XFRM netlink socket
+[    3.211373] NET: Registered protocol family 10
+[    3.216063] Segment Routing with IPv6
+[    3.219428] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    3.225549] NET: Registered protocol family 17
+[    3.229648] NET: Registered protocol family 15
+[    3.234061] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    3.246974] can: controller area network core (rev 20170425 abi 9)
+[    3.253109] NET: Registered protocol family 29
+[    3.257493] can: raw protocol (rev 20170425)
+[    3.261729] can: broadcast manager protocol (rev 20170425 t)
+[    3.267354] can: netlink gateway (rev 20170425) max_hops=1
+[    3.272856] Bluetooth: RFCOMM TTY layer initialized
+[    3.277653] Bluetooth: RFCOMM socket layer initialized
+[    3.282758] Bluetooth: RFCOMM ver 1.11
+[    3.286477] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    3.291745] Bluetooth: BNEP filters: protocol multicast
+[    3.296937] Bluetooth: BNEP socket layer initialized
+[    3.301866] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    3.307749] Bluetooth: HIDP socket layer initialized
+[    3.312782] 9pnet: Installing 9P2000 support
+[    3.316934] Key type dns_resolver registered
+[    3.321602] registered taskstats version 1
+[    3.325226] Loading compiled-in X.509 certificates
+[    3.330319] Btrfs loaded, crc32c=crc32c-generic
+[    3.340523] ff000000.serial: ttyPS0 at MMIO 0xff000000 (irq = 39, base_baud = 6249999) is a xuartps
+[    3.349995] console [ttyPS0] enabled
+[    3.353585] bootconsole [cdns0] disabled
+[    3.361781] of-fpga-region fpga-full: FPGA Region probed
+[    3.370854] xilinx-zynqmp-dma fd500000.dma: ZynqMP DMA driver Probe success
+[    3.377959] xilinx-zynqmp-dma fd510000.dma: ZynqMP DMA driver Probe success
+[    3.385063] xilinx-zynqmp-dma fd520000.dma: ZynqMP DMA driver Probe success
+[    3.392164] xilinx-zynqmp-dma fd530000.dma: ZynqMP DMA driver Probe success
+[    3.399264] xilinx-zynqmp-dma fd540000.dma: ZynqMP DMA driver Probe success
+[    3.406363] xilinx-zynqmp-dma fd550000.dma: ZynqMP DMA driver Probe success
+[    3.413463] xilinx-zynqmp-dma fd560000.dma: ZynqMP DMA driver Probe success
+[    3.420565] xilinx-zynqmp-dma fd570000.dma: ZynqMP DMA driver Probe success
+[    3.427737] xilinx-zynqmp-dma ffa80000.dma: ZynqMP DMA driver Probe success
+[    3.434835] xilinx-zynqmp-dma ffa90000.dma: ZynqMP DMA driver Probe success
+[    3.441932] xilinx-zynqmp-dma ffaa0000.dma: ZynqMP DMA driver Probe success
+[    3.449036] xilinx-zynqmp-dma ffab0000.dma: ZynqMP DMA driver Probe success
+[    3.456134] xilinx-zynqmp-dma ffac0000.dma: ZynqMP DMA driver Probe success
+[    3.463237] xilinx-zynqmp-dma ffad0000.dma: ZynqMP DMA driver Probe success
+[    3.470336] xilinx-zynqmp-dma ffae0000.dma: ZynqMP DMA driver Probe success
+[    3.477439] xilinx-zynqmp-dma ffaf0000.dma: ZynqMP DMA driver Probe success
+[    3.487187] m25p80 spi0.0: n25q512a (131072 Kbytes)
+[    3.492079] 3 fixed-partitions partitions found on MTD device spi0.0
+[    3.498428] Creating 3 MTD partitions on "spi0.0":
+[    3.503213] 0x000000000000-0x000000100000 : "boot"
+[    3.508472] 0x000000100000-0x000000140000 : "bootenv"
+[    3.513948] 0x000000140000-0x000001740000 : "kernel"
+[    3.519674] macb ff0e0000.ethernet: Not enabling partial store and forward
+[    3.527075] libphy: MACB_mii_bus: probed
+[    3.531204] zynqmp_pll_disable() clock disable failed for dpll_int, ret = -13
+[    3.610199] Marvell 88E1510 ff0e0000.ethernet-ffffffff:01: attached PHY driver [Marvell 88E1510] (mii_bus:phy_addr=ff0e0000.ethernet-ffffffff:01, irq=POLL)
+[    3.624104] macb ff0e0000.ethernet eth0: Cadence GEM rev 0x50070106 at 0xff0e0000 irq 28 (04:91:62:bf:c5:e7)
+[    3.634219] xilinx-axipmon ffa00000.perf-monitor: Probed Xilinx APM
+[    3.640734] xilinx-axipmon fd0b0000.perf-monitor: Probed Xilinx APM
+[    3.647210] xilinx-axipmon fd490000.perf-monitor: Probed Xilinx APM
+[    3.653682] xilinx-axipmon ffa10000.perf-monitor: Probed Xilinx APM
+[    3.660178] dwc3-of-simple ff9d0000.usb0: dwc3_simple_set_phydata: Can't find usb3-phy
+[    3.668514] dwc3 fe200000.dwc3: Failed to get clk 'ref': -2
+[    3.674942] cdns-i2c ff020000.i2c: 400 kHz mmio ff020000 irq 30
+[    3.681476] cdns-wdt fd4d0000.watchdog: Xilinx Watchdog Timer with timeout 60s
+[    3.688949] cdns-wdt ff150000.watchdog: Xilinx Watchdog Timer with timeout 10s
+[    3.725984] mmc0: SDHCI controller on ff160000.mmc [ff160000.mmc] using ADMA 64-bit
+[    3.769983] mmc1: SDHCI controller on ff170000.mmc [ff170000.mmc] using ADMA 64-bit
+[    3.785535] rtc_zynqmp ffa60000.rtc: setting system clock to 1970-01-01 00:00:13 UTC (13)
+[    3.793707] of_cfs_init
+[    3.796163] of_cfs_init: OK
+[    3.799074] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    3.812129] mmc0: new HS200 MMC card at address 0001
+[    3.817585] mmcblk0: mmc0:0001 IS008G 7.28 GiB 
+[    3.822505] mmcblk0boot0: mmc0:0001 IS008G partition 1 4.00 MiB
+[    3.828799] mmcblk0boot1: mmc0:0001 IS008G partition 2 4.00 MiB
+[    3.834819] mmcblk0rpmb: mmc0:0001 IS008G partition 3 4.00 MiB, chardev (244:0)
+[    3.869247] mmc1: new SDHC card at address 5048
+[    3.874261] mmcblk1: mmc1:5048 SD32G 29.7 GiB 
+[    3.880885]  mmcblk1: p1 p2
+[    3.939390] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    3.945917] clk: Not disabling unused clocks
+[    3.950181] ALSA device list:
+[    3.953137]   No soundcards found.
+[    3.956773] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    3.965381] cfg80211: failed to load regulatory.db
+[    4.734141] random: fast init done
+[    5.327033] EXT4-fs (mmcblk1p2): recovery complete
+[    5.333522] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+[    5.341635] VFS: Mounted root (ext4 filesystem) on device 179:26.
+[    5.347790] devtmpfs: mounted
+[    5.350952] Freeing unused kernel memory: 832K
+[    5.355422] Run /sbin/init as init process
+[    6.358619] random: systemd: uninitialized urandom read (16 bytes read)
+[    6.385982] systemd[1]: systemd 219 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 -SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+[    6.404265] systemd[1]: Detected architecture arm64.
+[    6.422035] systemd[1]: No hostname configured.
+[    6.426585] systemd[1]: Set hostname to <localhost>.
+[    6.450810] random: systemd: uninitialized urandom read (16 bytes read)
+[    6.458655] random: systemd: uninitialized urandom read (16 bytes read)
+[    7.148923] systemd[1]: Cannot add dependency job for unit display-manager.service, ignoring: Unit not found.
+[    7.161017] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    7.190086] systemd[1]: Reached target Swap.
+[    7.210031] systemd[1]: Reached target Local Encrypted Volumes.
+[    7.226073] systemd[1]: Created slice Root Slice.
+[    7.246079] systemd[1]: Listening on Delayed Shutdown Socket.
+[    7.324169] systemd-readahead[1718]: Failed to create fanotify object: Function not implemented
+[    8.280274] systemd-journald[1729]: Received request to flush runtime journal from PID 1
+[   37.849759] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   37.858607] pps pps0: new PPS source ptp0
+[   37.862652] macb ff0e0000.ethernet: gem-ptp-timer ptp clock registered.
+[   37.869400] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   38.980483] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   39.004416] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   41.006334] macb ff0e0000.ethernet eth0: link up (100/Full)
+[   41.011964] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[  177.756850] random: crng init done
+[  177.760241] random: 7 urandom warning(s) missed due to ratelimiting
+[  636.270562] fpga_manager fpga0: writing econ-d-tester-socket.bit to Xilinx ZynqMP FPGA Manager
+[10347.280054] mmc1: Timeout waiting for hardware interrupt.
+[10347.285448] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[10347.291870] mmc1: sdhci: Sys addr:  0x00000090 | Version:  0x00001002
+[10347.298293] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000087
+[10347.304716] mmc1: sdhci: Argument:  0x00000000 | Trn mode: 0x00000023
+[10347.311139] mmc1: sdhci: Present:   0x01e70006 | Host ctl: 0x0000001b
+[10347.317562] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[10347.323985] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x00000607
+[10347.330409] mmc1: sdhci: Timeout:   0x0000000e | Int stat: 0x00000000
+[10347.336832] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[10347.343255] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[10347.349679] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[10347.356102] mmc1: sdhci: Cmd:       0x00000c1b | Max curr: 0x00000000
+[10347.362525] mmc1: sdhci: Resp[0]:   0x00000c00 | Resp[1]:  0x00eddf7f
+[10347.368948] mmc1: sdhci: Resp[2]:   0x325b5900 | Resp[3]:  0x00000900
+[10347.375370] mmc1: sdhci: Host ctl2: 0x00000000
+[10347.379799] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e218
+[10347.386915] mmc1: sdhci: ============================================
+[10350.396081] mmc1: Card stuck in wrong state! mmcblk1 card_busy_detect status: 0xe00
+[10351.640058] mmc1: card never left busy state
+[10351.644326] mmc1: tried to HW reset card, got error -110
+[10351.649630] mmcblk1: recovery failed!
+[10351.653300] print_req_error: I/O error, dev mmcblk1, sector 31740984
+[10351.660069] Aborting journal on device mmcblk1p2-8.
+[10351.661034] EXT4-fs error (device mmcblk1p2) in __ext4_new_inode:933: Readonly filesystem
+[10361.872060] mmc1: Timeout waiting for hardware interrupt.
+[10361.877447] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[10361.883871] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[10361.890294] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[10361.896717] mmc1: sdhci: Argument:  0x01e40800 | Trn mode: 0x0000002b
+[10361.903140] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[10361.909563] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[10361.915986] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[10361.922410] mmc1: sdhci: Timeout:   0x00000009 | Int stat: 0x00000000
+[10361.928833] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[10361.935256] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[10361.941679] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[10361.948102] mmc1: sdhci: Cmd:       0x0000193a | Max curr: 0x00000000
+[10361.954525] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[10361.960949] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[10361.967371] mmc1: sdhci: Host ctl2: 0x00000000
+[10361.971799] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[10361.978916] mmc1: sdhci: ============================================
+[10361.991772] mmcblk1: error -110 requesting status
+[10361.996484] mmcblk1: recovery failed!
+[10362.000154] print_req_error: I/O error, dev mmcblk1, sector 31721472
+[10362.006508] Buffer I/O error on dev mmcblk1p2, logical block 3702784, lost sync page write
+[10362.014811] JBD2: Error -5 detected when updating journal superblock for mmcblk1p2-8.
+[10372.112065] mmc1: Timeout waiting for hardware interrupt.
+[10372.117453] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[10372.123876] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[10372.130298] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[10372.136721] mmc1: sdhci: Argument:  0x00200800 | Trn mode: 0x0000002b
+[10372.143145] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[10372.149568] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[10372.155991] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[10372.162414] mmc1: sdhci: Timeout:   0x00000009 | Int stat: 0x00000000
+[10372.168838] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[10372.175261] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[10372.181684] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[10372.188107] mmc1: sdhci: Cmd:       0x0000193a | Max curr: 0x00000000
+[10372.194530] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[10372.200954] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[10372.207376] mmc1: sdhci: Host ctl2: 0x00000000
+[10372.211804] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[10372.218920] mmc1: sdhci: ============================================
+[10372.234772] mmcblk1: error -110 requesting status
+[10372.239478] mmcblk1: recovery failed!
+[10372.243151] print_req_error: I/O error, dev mmcblk1, sector 2099200
+[10372.249410] Buffer I/O error on dev mmcblk1p2, logical block 0, lost sync page write
+[10372.257157] EXT4-fs (mmcblk1p2): previous I/O error to superblock detected
+[10382.352070] mmc1: Timeout waiting for hardware interrupt.
+[10382.357457] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[10382.363880] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[10382.370303] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[10382.376726] mmc1: sdhci: Argument:  0x00200800 | Trn mode: 0x0000002b
+[10382.383150] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[10382.389573] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[10382.395996] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[10382.402419] mmc1: sdhci: Timeout:   0x00000009 | Int stat: 0x00000000
+[10382.408842] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[10382.415265] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[10382.421689] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[10382.428112] mmc1: sdhci: Cmd:       0x0000193a | Max curr: 0x00000000
+[10382.434535] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[10382.440958] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[10382.447381] mmc1: sdhci: Host ctl2: 0x00000000
+[10382.451809] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[10382.458925] mmc1: sdhci: ============================================
+[10382.471750] mmcblk1: error -110 requesting status
+[10382.476455] mmcblk1: recovery failed!
+[10382.480128] print_req_error: I/O error, dev mmcblk1, sector 2099200
+[10382.486421] Buffer I/O error on dev mmcblk1p2, logical block 0, lost sync page write
+[10382.494214] EXT4-fs (mmcblk1p2): previous I/O error to superblock detected
+[10382.494218] EXT4-fs error (device mmcblk1p2): ext4_journal_check_start:61: Detected aborted journal
+[10382.494223] EXT4-fs (mmcblk1p2): Remounting filesystem read-only
+[10392.592076] mmc1: Timeout waiting for hardware interrupt.
+[10392.597462] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[10392.603885] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[10392.610308] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[10392.616731] mmc1: sdhci: Argument:  0x0158cb70 | Trn mode: 0x0000002b
+[10392.623154] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[10392.629577] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[10392.636000] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[10392.642424] mmc1: sdhci: Timeout:   0x00000009 | Int stat: 0x00000000
+[10392.648847] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[10392.655270] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[10392.661693] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[10392.668116] mmc1: sdhci: Cmd:       0x0000193a | Max curr: 0x00000000
+[10392.674540] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[10392.680963] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[10392.687385] mmc1: sdhci: Host ctl2: 0x00000000
+[10392.691813] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[10392.698930] mmc1: sdhci: ============================================
+[10392.711826] mmcblk1: error -110 requesting status
+[10392.716532] mmcblk1: recovery failed!
+[10392.720215] print_req_error: I/O error, dev mmcblk1, sector 22596464
+[10392.726565] EXT4-fs warning (device mmcblk1p2): ext4_end_bio:323: I/O error 10 writing to inode 659120 (offset 0 size 0 starting block 2824559)
+[10392.739435] Buffer I/O error on device mmcblk1p2, logical block 2562158
+[10402.832076] mmc1: Timeout waiting for hardware interrupt.
+[10402.837467] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[10402.843889] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[10402.850313] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[10402.856736] mmc1: sdhci: Argument:  0x00200800 | Trn mode: 0x0000002b
+[10402.863159] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[10402.869582] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[10402.876005] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[10402.882428] mmc1: sdhci: Timeout:   0x00000009 | Int stat: 0x00000000
+[10402.888852] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[10402.895275] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[10402.901698] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[10402.908121] mmc1: sdhci: Cmd:       0x0000193a | Max curr: 0x00000000
+[10402.914544] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[10402.920967] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[10402.927390] mmc1: sdhci: Host ctl2: 0x00000000
+[10402.931818] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[10402.938935] mmc1: sdhci: ============================================
+[10402.951751] mmcblk1: error -110 requesting status
+[10402.956452] mmcblk1: recovery failed!
+[10402.960117] print_req_error: I/O error, dev mmcblk1, sector 2099200
+[10402.966425] Buffer I/O error on dev mmcblk1p2, logical block 0, lost sync page write
+[10402.974211] EXT4-fs (mmcblk1p2): I/O error while writing superblock
+[10402.974766] EXT4-fs (mmcblk1p2): previous I/O error to superblock detected
+[10413.072123] mmc1: Timeout waiting for hardware interrupt.
+[10413.077515] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[10413.083938] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[10413.090361] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[10413.096784] mmc1: sdhci: Argument:  0x00200800 | Trn mode: 0x0000002b
+[10413.103207] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[10413.109630] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[10413.116053] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[10413.122477] mmc1: sdhci: Timeout:   0x00000009 | Int stat: 0x00000000
+[10413.128900] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[10413.135323] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[10413.141746] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[10413.148169] mmc1: sdhci: Cmd:       0x0000193a | Max curr: 0x00000000
+[10413.154593] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[10413.161016] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[10413.167438] mmc1: sdhci: Host ctl2: 0x00000000
+[10413.171866] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[10413.178983] mmc1: sdhci: ============================================
+[10413.191858] mmcblk1: error -110 requesting status
+[10413.196563] mmcblk1: recovery failed!
+[10413.200242] print_req_error: I/O error, dev mmcblk1, sector 2099200
+[10413.206504] Buffer I/O error on dev mmcblk1p2, logical block 0, lost sync page write
+[10413.214253] EXT4-fs (mmcblk1p2): I/O error while writing superblock
+[10413.214610] EXT4-fs (mmcblk1p2): I/O error while writing superblock
+[10413.220535] EXT4-fs error (device mmcblk1p2): ext4_journal_check_start:61: Detected aborted journal
+[10413.235837] EXT4-fs (mmcblk1p2): ext4_writepages: jbd2_start: 13311 pages, ino 659120; err -30
+[17477.138357] mmc1: Timeout waiting for hardware interrupt.
+[17477.143748] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[17477.150171] mmc1: sdhci: Sys addr:  0x00000020 | Version:  0x00001002
+[17477.156594] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000020
+[17477.163017] mmc1: sdhci: Argument:  0x00e6f930 | Trn mode: 0x0000003b
+[17477.169441] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[17477.175863] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[17477.182286] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[17477.188709] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[17477.195133] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[17477.201556] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[17477.207979] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[17477.214403] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[17477.220826] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[17477.227249] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[17477.233671] mmc1: sdhci: Host ctl2: 0x00000000
+[17477.238099] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[17477.245216] mmc1: sdhci: ============================================
+[17477.258085] mmcblk1: error -110 requesting status
+[17478.498358] mmc1: card never left busy state
+[17478.502630] mmc1: tried to HW reset card, got error -110
+[17478.507942] mmcblk1: recovery failed!
+[17478.511627] print_req_error: I/O error, dev mmcblk1, sector 15137072
+[17488.658358] mmc1: Timeout waiting for hardware interrupt.
+[17488.663749] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[17488.670172] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[17488.676595] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[17488.683018] mmc1: sdhci: Argument:  0x00e6f930 | Trn mode: 0x0000003b
+[17488.689441] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[17488.695864] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[17488.702287] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[17488.708711] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[17488.715134] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[17488.721557] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[17488.727980] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[17488.734404] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[17488.740827] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[17488.747250] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[17488.753672] mmc1: sdhci: Host ctl2: 0x00000000
+[17488.758100] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[17488.765217] mmc1: sdhci: ============================================
+[17488.778259] mmcblk1: error -110 requesting status
+[17488.782966] mmcblk1: recovery failed!
+[17488.786633] print_req_error: I/O error, dev mmcblk1, sector 15137072
+[17939.730303] mmc1: Timeout waiting for hardware interrupt.
+[17939.735695] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[17939.742118] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[17939.748541] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[17939.754964] mmc1: sdhci: Argument:  0x00e6f930 | Trn mode: 0x0000003b
+[17939.761387] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[17939.767810] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[17939.774233] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[17939.780657] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[17939.787080] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[17939.793503] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[17939.799926] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[17939.806349] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[17939.812773] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[17939.819196] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[17939.825618] mmc1: sdhci: Host ctl2: 0x00000000
+[17939.830046] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[17939.837163] mmc1: sdhci: ============================================
+[17939.850018] mmcblk1: error -110 requesting status
+[17939.854776] mmcblk1: recovery failed!
+[17939.858491] print_req_error: I/O error, dev mmcblk1, sector 15137072
+[18390.801966] mmc1: Timeout waiting for hardware interrupt.
+[18390.807355] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[18390.813778] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[18390.820200] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[18390.826624] mmc1: sdhci: Argument:  0x00e6f930 | Trn mode: 0x0000003b
+[18390.833047] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[18390.839470] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[18390.845893] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[18390.852316] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[18390.858740] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[18390.865163] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[18390.871586] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[18390.878009] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[18390.884432] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[18390.890856] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[18390.897278] mmc1: sdhci: Host ctl2: 0x00000000
+[18390.901706] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[18390.908822] mmc1: sdhci: ============================================
+[18390.921761] mmcblk1: error -110 requesting status
+[18390.926466] mmcblk1: recovery failed!
+[18390.930135] print_req_error: I/O error, dev mmcblk1, sector 15137072
+[19792.145363] mmc1: Timeout waiting for hardware interrupt.
+[19792.150748] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[19792.157171] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[19792.163594] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[19792.170017] mmc1: sdhci: Argument:  0x00e6f930 | Trn mode: 0x0000003b
+[19792.176440] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[19792.182864] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[19792.189287] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[19792.195710] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[19792.202133] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[19792.208556] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[19792.214980] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[19792.221403] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[19792.227826] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[19792.234249] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[19792.240671] mmc1: sdhci: Host ctl2: 0x00000000
+[19792.245100] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[19792.252216] mmc1: sdhci: ============================================
+[19792.265158] mmcblk1: error -110 requesting status
+[19792.269888] mmcblk1: recovery failed!
+[19792.273554] print_req_error: I/O error, dev mmcblk1, sector 15137072
+[20070.673286] mmc1: Timeout waiting for hardware interrupt.
+[20070.678679] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20070.685102] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20070.691525] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20070.697948] mmc1: sdhci: Argument:  0x00a444d0 | Trn mode: 0x0000003b
+[20070.704371] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20070.710794] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20070.717217] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20070.723641] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20070.730064] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20070.736487] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20070.742910] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20070.749333] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20070.755757] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20070.762180] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20070.768602] mmc1: sdhci: Host ctl2: 0x00000000
+[20070.773030] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20070.780146] mmc1: sdhci: ============================================
+[20070.793102] mmcblk1: error -110 requesting status
+[20070.797808] mmcblk1: recovery failed!
+[20070.801472] print_req_error: I/O error, dev mmcblk1, sector 10765520
+[20080.913286] mmc1: Timeout waiting for hardware interrupt.
+[20080.918675] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20080.925098] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20080.931521] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20080.937944] mmc1: sdhci: Argument:  0x00a444d0 | Trn mode: 0x0000003b
+[20080.944367] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20080.950790] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20080.957213] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20080.963637] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20080.970060] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20080.976483] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20080.982906] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20080.989329] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20080.995753] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20081.002176] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20081.008598] mmc1: sdhci: Host ctl2: 0x00000000
+[20081.013026] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20081.020143] mmc1: sdhci: ============================================
+[20081.032992] mmcblk1: error -110 requesting status
+[20081.037706] mmcblk1: recovery failed!
+[20081.041375] print_req_error: I/O error, dev mmcblk1, sector 10765520
+[20091.153283] mmc1: Timeout waiting for hardware interrupt.
+[20091.158671] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20091.165094] mmc1: sdhci: Sys addr:  0x00000020 | Version:  0x00001002
+[20091.171517] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000020
+[20091.177940] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20091.184363] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20091.190786] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20091.197209] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20091.203633] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20091.210056] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20091.216479] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20091.222902] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20091.229325] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20091.235749] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20091.242172] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20091.248594] mmc1: sdhci: Host ctl2: 0x00000000
+[20091.253022] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20091.260139] mmc1: sdhci: ============================================
+[20091.273020] mmcblk1: error -110 requesting status
+[20091.277755] mmcblk1: recovery failed!
+[20091.281426] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20101.393278] mmc1: Timeout waiting for hardware interrupt.
+[20101.398667] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20101.405090] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20101.411513] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20101.417936] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20101.424359] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20101.430782] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20101.437205] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20101.443629] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20101.450052] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20101.456475] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20101.462898] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20101.469321] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20101.475745] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20101.482168] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20101.488590] mmc1: sdhci: Host ctl2: 0x00000000
+[20101.493019] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20101.500135] mmc1: sdhci: ============================================
+[20101.513061] mmcblk1: error -110 requesting status
+[20101.517798] mmcblk1: recovery failed!
+[20101.521498] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20111.633278] mmc1: Timeout waiting for hardware interrupt.
+[20111.638663] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20111.645086] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20111.651509] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20111.657932] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20111.664355] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20111.670778] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20111.677201] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20111.683625] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20111.690048] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20111.696471] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20111.702895] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20111.709317] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20111.715741] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20111.722164] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20111.728586] mmc1: sdhci: Host ctl2: 0x00000000
+[20111.733014] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20111.740131] mmc1: sdhci: ============================================
+[20111.752959] mmcblk1: error -110 requesting status
+[20111.757731] mmcblk1: recovery failed!
+[20111.761416] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20121.873313] mmc1: Timeout waiting for hardware interrupt.
+[20121.878702] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20121.885125] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20121.891548] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20121.897971] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20121.904395] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20121.910818] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20121.917241] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20121.923664] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20121.930088] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20121.936510] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20121.942934] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20121.949357] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20121.955780] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20121.962203] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20121.968626] mmc1: sdhci: Host ctl2: 0x00000000
+[20121.973054] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20121.980170] mmc1: sdhci: ============================================
+[20121.993039] mmcblk1: error -110 requesting status
+[20121.997746] mmcblk1: recovery failed!
+[20122.001417] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20132.113271] mmc1: Timeout waiting for hardware interrupt.
+[20132.118664] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20132.125087] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20132.131510] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20132.137933] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20132.144356] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20132.150779] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20132.157202] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20132.163625] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20132.170049] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20132.176472] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20132.182895] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20132.189318] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20132.195741] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20132.202165] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20132.208587] mmc1: sdhci: Host ctl2: 0x00000000
+[20132.213015] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20132.220131] mmc1: sdhci: ============================================
+[20132.233002] mmcblk1: error -110 requesting status
+[20132.237736] mmcblk1: recovery failed!
+[20132.241400] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20142.353309] mmc1: Timeout waiting for hardware interrupt.
+[20142.358695] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20142.365118] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20142.371540] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20142.377964] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20142.384387] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20142.390810] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20142.397233] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20142.403656] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20142.410079] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20142.416503] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20142.422926] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20142.429349] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20142.435772] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20142.442195] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20142.448618] mmc1: sdhci: Host ctl2: 0x00000000
+[20142.453046] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20142.460162] mmc1: sdhci: ============================================
+[20142.473001] mmcblk1: error -110 requesting status
+[20142.477768] mmcblk1: recovery failed!
+[20142.481458] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20152.593265] mmc1: Timeout waiting for hardware interrupt.
+[20152.598656] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20152.605079] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20152.611502] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20152.617925] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20152.624348] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20152.630771] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20152.637194] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20152.643617] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20152.650041] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20152.656464] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20152.662887] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20152.669310] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20152.675734] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20152.682157] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20152.688579] mmc1: sdhci: Host ctl2: 0x00000000
+[20152.693007] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20152.700124] mmc1: sdhci: ============================================
+[20152.712956] mmcblk1: error -110 requesting status
+[20152.717725] mmcblk1: recovery failed!
+[20152.721408] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20162.833265] mmc1: Timeout waiting for hardware interrupt.
+[20162.838653] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20162.845075] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20162.851498] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20162.857921] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20162.864344] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20162.870767] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20162.877190] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20162.883613] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20162.890037] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20162.896460] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20162.902883] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20162.909306] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20162.915730] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20162.922153] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20162.928575] mmc1: sdhci: Host ctl2: 0x00000000
+[20162.933003] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20162.940120] mmc1: sdhci: ============================================
+[20162.953345] mmcblk1: error -110 requesting status
+[20162.958074] mmcblk1: recovery failed!
+[20162.961793] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20173.073261] mmc1: Timeout waiting for hardware interrupt.
+[20173.078648] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20173.085071] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20173.091494] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20173.097917] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20173.104340] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20173.110763] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20173.117187] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20173.123610] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20173.130033] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20173.136456] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20173.142879] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20173.149302] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20173.155726] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20173.162149] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20173.168571] mmc1: sdhci: Host ctl2: 0x00000000
+[20173.172999] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20173.180116] mmc1: sdhci: ============================================
+[20173.192962] mmcblk1: error -110 requesting status
+[20173.197731] mmcblk1: recovery failed!
+[20173.201417] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20183.313260] mmc1: Timeout waiting for hardware interrupt.
+[20183.318653] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20183.325076] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20183.331498] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20183.337922] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20183.344345] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20183.350768] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20183.357191] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20183.363615] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20183.370038] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20183.376461] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20183.382884] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20183.389307] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20183.395730] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20183.402154] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20183.408576] mmc1: sdhci: Host ctl2: 0x00000000
+[20183.413004] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20183.420120] mmc1: sdhci: ============================================
+[20183.432949] mmcblk1: error -110 requesting status
+[20183.437664] mmcblk1: recovery failed!
+[20183.441328] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20193.553257] mmc1: Timeout waiting for hardware interrupt.
+[20193.558649] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20193.565072] mmc1: sdhci: Sys addr:  0x00000018 | Version:  0x00001002
+[20193.571495] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000018
+[20193.577918] mmc1: sdhci: Argument:  0x00e516a8 | Trn mode: 0x0000003b
+[20193.584341] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20193.590764] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20193.597187] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20193.603610] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20193.610034] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20193.616457] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20193.622880] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20193.629303] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20193.635726] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20193.642150] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20193.648572] mmc1: sdhci: Host ctl2: 0x00000000
+[20193.653000] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20193.660117] mmc1: sdhci: ============================================
+[20193.673152] mmcblk1: error -110 requesting status
+[20193.677912] mmcblk1: recovery failed!
+[20193.681615] print_req_error: I/O error, dev mmcblk1, sector 15013544
+[20203.793253] mmc1: Timeout waiting for hardware interrupt.
+[20203.798645] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20203.805068] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20203.811491] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20203.817914] mmc1: sdhci: Argument:  0x00e516a8 | Trn mode: 0x0000003b
+[20203.824337] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20203.830760] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20203.837183] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20203.843607] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20203.850030] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20203.856453] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20203.862876] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20203.869299] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20203.875722] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20203.882146] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20203.888568] mmc1: sdhci: Host ctl2: 0x00000000
+[20203.892996] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20203.900113] mmc1: sdhci: ============================================
+[20203.912958] mmcblk1: error -110 requesting status
+[20203.917708] mmcblk1: recovery failed!
+[20203.921391] print_req_error: I/O error, dev mmcblk1, sector 15013544
+[20214.033252] mmc1: Timeout waiting for hardware interrupt.
+[20214.038641] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20214.045064] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20214.051487] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20214.057910] mmc1: sdhci: Argument:  0x00e516a8 | Trn mode: 0x0000003b
+[20214.064333] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20214.070756] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20214.077179] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20214.083602] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20214.090026] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20214.096449] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20214.102872] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20214.109295] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20214.115718] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20214.122142] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20214.128564] mmc1: sdhci: Host ctl2: 0x00000000
+[20214.132992] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20214.140109] mmc1: sdhci: ============================================
+[20214.153118] mmcblk1: error -110 requesting status
+[20214.157849] mmcblk1: recovery failed!
+[20214.161515] print_req_error: I/O error, dev mmcblk1, sector 15013544
+[20224.273248] mmc1: Timeout waiting for hardware interrupt.
+[20224.278637] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20224.285060] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20224.291483] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20224.297906] mmc1: sdhci: Argument:  0x00e516a8 | Trn mode: 0x0000003b
+[20224.304329] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20224.310752] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20224.317175] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20224.323599] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20224.330022] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20224.336445] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20224.342868] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20224.349291] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20224.355715] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20224.362138] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20224.368560] mmc1: sdhci: Host ctl2: 0x00000000
+[20224.372988] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20224.380105] mmc1: sdhci: ============================================
+[20224.392973] mmcblk1: error -110 requesting status
+[20224.397739] mmcblk1: recovery failed!
+[20224.401452] print_req_error: I/O error, dev mmcblk1, sector 15013544
+[20234.513247] mmc1: Timeout waiting for hardware interrupt.
+[20234.518633] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20234.525056] mmc1: sdhci: Sys addr:  0x00000020 | Version:  0x00001002
+[20234.531479] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000020
+[20234.537902] mmc1: sdhci: Argument:  0x00e516e0 | Trn mode: 0x0000003b
+[20234.544325] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20234.550748] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20234.557171] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20234.563595] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20234.570018] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20234.576441] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20234.582864] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20234.589287] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20234.595711] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20234.602134] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20234.608557] mmc1: sdhci: Host ctl2: 0x00000000
+[20234.612985] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20234.620101] mmc1: sdhci: ============================================
+[20234.633008] mmcblk1: error -110 requesting status
+[20234.637718] mmcblk1: recovery failed!
+[20234.641391] print_req_error: I/O error, dev mmcblk1, sector 15013600
+[20244.753243] mmc1: Timeout waiting for hardware interrupt.
+[20244.758629] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20244.765052] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20244.771475] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20244.777898] mmc1: sdhci: Argument:  0x00e516e0 | Trn mode: 0x0000003b
+[20244.784321] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20244.790744] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20244.797168] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20244.803591] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20244.810014] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20244.816437] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20244.822861] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20244.829284] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20244.835707] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20244.842130] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20244.848552] mmc1: sdhci: Host ctl2: 0x00000000
+[20244.852981] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20244.860097] mmc1: sdhci: ============================================
+[20244.872930] mmcblk1: error -110 requesting status
+[20244.877638] mmcblk1: recovery failed!
+[20244.881305] print_req_error: I/O error, dev mmcblk1, sector 15013600
+[20254.993242] mmc1: Timeout waiting for hardware interrupt.
+[20254.998634] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20255.005057] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20255.011480] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20255.017903] mmc1: sdhci: Argument:  0x00e516e0 | Trn mode: 0x0000003b
+[20255.024326] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20255.030749] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20255.037172] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20255.043596] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20255.050019] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20255.056442] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20255.062865] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20255.069288] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20255.075712] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20255.082135] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20255.088557] mmc1: sdhci: Host ctl2: 0x00000000
+[20255.092985] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20255.100101] mmc1: sdhci: ============================================
+[20255.113041] mmcblk1: error -110 requesting status
+[20255.117744] mmcblk1: recovery failed!
+[20255.121420] print_req_error: I/O error, dev mmcblk1, sector 15013600
+[20265.233239] mmc1: Timeout waiting for hardware interrupt.
+[20265.238630] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20265.245053] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20265.251476] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20265.257899] mmc1: sdhci: Argument:  0x00e516e0 | Trn mode: 0x0000003b
+[20265.264322] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20265.270745] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20265.277168] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20265.283591] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20265.290015] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20265.296438] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20265.302861] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20265.309284] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20265.315707] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20265.322131] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20265.328553] mmc1: sdhci: Host ctl2: 0x00000000
+[20265.332981] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20265.340098] mmc1: sdhci: ============================================
+[20265.352977] mmcblk1: error -110 requesting status
+[20265.357764] mmcblk1: recovery failed!
+[20265.361460] print_req_error: I/O error, dev mmcblk1, sector 15013600
+[20275.473238] mmc1: Timeout waiting for hardware interrupt.
+[20275.478626] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20275.485049] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20275.491472] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20275.497895] mmc1: sdhci: Argument:  0x00e51698 | Trn mode: 0x0000003b
+[20275.504318] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20275.510741] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20275.517164] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20275.523588] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20275.530011] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20275.536434] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20275.542857] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20275.549280] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20275.555704] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20275.562127] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20275.568549] mmc1: sdhci: Host ctl2: 0x00000000
+[20275.572977] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20275.580094] mmc1: sdhci: ============================================
+[20275.593121] mmcblk1: error -110 requesting status
+[20275.597860] mmcblk1: recovery failed!
+[20275.601527] print_req_error: I/O error, dev mmcblk1, sector 15013528
+[20285.713234] mmc1: Timeout waiting for hardware interrupt.
+[20285.718622] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20285.725045] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20285.731468] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20285.737891] mmc1: sdhci: Argument:  0x00e51698 | Trn mode: 0x0000003b
+[20285.744314] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20285.750737] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20285.757160] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20285.763584] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20285.770007] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20285.776430] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20285.782853] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20285.789276] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20285.795700] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20285.802123] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20285.808545] mmc1: sdhci: Host ctl2: 0x00000000
+[20285.812973] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20285.820090] mmc1: sdhci: ============================================
+[20285.832928] mmcblk1: error -110 requesting status
+[20285.837702] mmcblk1: recovery failed!
+[20285.841392] print_req_error: I/O error, dev mmcblk1, sector 15013528
+[20295.953233] mmc1: Timeout waiting for hardware interrupt.
+[20295.958627] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20295.965050] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20295.971473] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20295.977896] mmc1: sdhci: Argument:  0x00e51698 | Trn mode: 0x0000003b
+[20295.984319] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20295.990742] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20295.997165] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20296.003588] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20296.010012] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20296.016435] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20296.022858] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20296.029281] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20296.035704] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20296.042128] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20296.048550] mmc1: sdhci: Host ctl2: 0x00000000
+[20296.052978] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20296.060094] mmc1: sdhci: ============================================
+[20296.072944] mmcblk1: error -110 requesting status
+[20296.077653] mmcblk1: recovery failed!
+[20296.081318] print_req_error: I/O error, dev mmcblk1, sector 15013528
+[20306.193229] mmc1: Timeout waiting for hardware interrupt.
+[20306.198623] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20306.205046] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20306.211469] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20306.217892] mmc1: sdhci: Argument:  0x00e51698 | Trn mode: 0x0000003b
+[20306.224315] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20306.230738] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20306.237161] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20306.243584] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20306.250008] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20306.256431] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20306.262854] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20306.269277] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20306.275700] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20306.282123] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20306.288546] mmc1: sdhci: Host ctl2: 0x00000000
+[20306.292974] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20306.300090] mmc1: sdhci: ============================================
+[20306.312945] mmcblk1: error -110 requesting status
+[20306.317710] mmcblk1: recovery failed!
+[20306.321393] print_req_error: I/O error, dev mmcblk1, sector 15013528
+[20316.433228] mmc1: Timeout waiting for hardware interrupt.
+[20316.438619] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20316.445042] mmc1: sdhci: Sys addr:  0x00000018 | Version:  0x00001002
+[20316.451465] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000018
+[20316.457888] mmc1: sdhci: Argument:  0x00e52880 | Trn mode: 0x0000003b
+[20316.464311] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20316.470734] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20316.477157] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20316.483580] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20316.490004] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20316.496427] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20316.502850] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20316.509273] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20316.515696] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20316.522120] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20316.528542] mmc1: sdhci: Host ctl2: 0x00000000
+[20316.532970] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20316.540087] mmc1: sdhci: ============================================
+[20316.553063] mmcblk1: error -110 requesting status
+[20316.557777] mmcblk1: recovery failed!
+[20316.561441] print_req_error: I/O error, dev mmcblk1, sector 15018112
+[20326.673226] mmc1: Timeout waiting for hardware interrupt.
+[20326.678615] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20326.685039] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20326.691461] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20326.697884] mmc1: sdhci: Argument:  0x00e52880 | Trn mode: 0x0000003b
+[20326.704307] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20326.710730] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20326.717153] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20326.723576] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20326.730000] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20326.736423] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20326.742846] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20326.749269] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20326.755693] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20326.762116] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20326.768538] mmc1: sdhci: Host ctl2: 0x00000000
+[20326.772966] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20326.780083] mmc1: sdhci: ============================================
+[20326.792932] mmcblk1: error -110 requesting status
+[20326.797659] mmcblk1: recovery failed!
+[20326.801329] print_req_error: I/O error, dev mmcblk1, sector 15018112
+[20336.913223] mmc1: Timeout waiting for hardware interrupt.
+[20336.918611] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20336.925034] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20336.931457] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20336.937880] mmc1: sdhci: Argument:  0x00e52880 | Trn mode: 0x0000003b
+[20336.944303] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20336.950726] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20336.957149] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20336.963572] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20336.969996] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20336.976419] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20336.982842] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20336.989265] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20336.995689] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20337.002112] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20337.008534] mmc1: sdhci: Host ctl2: 0x00000000
+[20337.012962] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20337.020078] mmc1: sdhci: ============================================
+[20337.032958] mmcblk1: error -110 requesting status
+[20337.037665] mmcblk1: recovery failed!
+[20337.041328] print_req_error: I/O error, dev mmcblk1, sector 15018112
+[20347.153221] mmc1: Timeout waiting for hardware interrupt.
+[20347.158608] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20347.165030] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20347.171453] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20347.177876] mmc1: sdhci: Argument:  0x00e52880 | Trn mode: 0x0000003b
+[20347.184299] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20347.190722] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20347.197145] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20347.203568] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20347.209992] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20347.216415] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20347.222838] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20347.229261] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20347.235685] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20347.242108] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20347.248530] mmc1: sdhci: Host ctl2: 0x00000000
+[20347.252959] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20347.260075] mmc1: sdhci: ============================================
+[20347.272999] mmcblk1: error -110 requesting status
+[20347.277726] mmcblk1: recovery failed!
+[20347.281395] print_req_error: I/O error, dev mmcblk1, sector 15018112
+[20357.393218] mmc1: Timeout waiting for hardware interrupt.
+[20357.398612] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20357.405035] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20357.411457] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20357.417881] mmc1: sdhci: Argument:  0x00e516c0 | Trn mode: 0x0000003b
+[20357.424304] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20357.430727] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20357.437150] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20357.443573] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20357.449997] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20357.456420] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20357.462843] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20357.469266] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20357.475689] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20357.482112] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20357.488535] mmc1: sdhci: Host ctl2: 0x00000000
+[20357.492963] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20357.500079] mmc1: sdhci: ============================================
+[20357.512988] mmcblk1: error -110 requesting status
+[20357.517760] mmcblk1: recovery failed!
+[20357.521443] print_req_error: I/O error, dev mmcblk1, sector 15013568
+[20367.633216] mmc1: Timeout waiting for hardware interrupt.
+[20367.638608] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20367.645031] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20367.651453] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20367.657877] mmc1: sdhci: Argument:  0x00e516c0 | Trn mode: 0x0000003b
+[20367.664300] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20367.670723] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20367.677146] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20367.683569] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20367.689993] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20367.696416] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20367.702839] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20367.709262] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20367.715685] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20367.722109] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20367.728531] mmc1: sdhci: Host ctl2: 0x00000000
+[20367.732959] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20367.740075] mmc1: sdhci: ============================================
+[20367.752981] mmcblk1: error -110 requesting status
+[20367.757714] mmcblk1: recovery failed!
+[20367.761383] print_req_error: I/O error, dev mmcblk1, sector 15013568
+[20377.873214] mmc1: Timeout waiting for hardware interrupt.
+[20377.878604] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20377.885027] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20377.891450] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20377.897873] mmc1: sdhci: Argument:  0x00e516c0 | Trn mode: 0x0000003b
+[20377.904296] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20377.910719] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20377.917142] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20377.923565] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20377.929989] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20377.936412] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20377.942835] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20377.949258] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20377.955681] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20377.962105] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20377.968527] mmc1: sdhci: Host ctl2: 0x00000000
+[20377.972955] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20377.980072] mmc1: sdhci: ============================================
+[20377.993034] mmcblk1: error -110 requesting status
+[20377.997796] mmcblk1: recovery failed!
+[20378.001482] print_req_error: I/O error, dev mmcblk1, sector 15013568
+[20388.113250] mmc1: Timeout waiting for hardware interrupt.
+[20388.118635] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20388.125058] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20388.131480] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20388.137903] mmc1: sdhci: Argument:  0x00e516c0 | Trn mode: 0x0000003b
+[20388.144327] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20388.150750] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20388.157173] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20388.163596] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20388.170019] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20388.176443] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20388.182866] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20388.189289] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20388.195712] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20388.202135] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20388.208558] mmc1: sdhci: Host ctl2: 0x00000000
+[20388.212986] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20388.220102] mmc1: sdhci: ============================================
+[20388.233039] mmcblk1: error -110 requesting status
+[20388.237778] mmcblk1: recovery failed!
+[20388.241449] print_req_error: I/O error, dev mmcblk1, sector 15013568
+[20398.353209] mmc1: Timeout waiting for hardware interrupt.
+[20398.358596] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20398.365019] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20398.371442] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20398.377865] mmc1: sdhci: Argument:  0x00e51698 | Trn mode: 0x0000003b
+[20398.384288] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20398.390711] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20398.397134] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20398.403557] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20398.409981] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20398.416404] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20398.422827] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20398.429250] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20398.435673] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20398.442097] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20398.448519] mmc1: sdhci: Host ctl2: 0x00000000
+[20398.452947] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20398.460064] mmc1: sdhci: ============================================
+[20398.472921] mmcblk1: error -110 requesting status
+[20398.477632] mmcblk1: recovery failed!
+[20398.481296] print_req_error: I/O error, dev mmcblk1, sector 15013528
+[20408.593208] mmc1: Timeout waiting for hardware interrupt.
+[20408.598601] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20408.605023] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20408.611446] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20408.617870] mmc1: sdhci: Argument:  0x00e51698 | Trn mode: 0x0000003b
+[20408.624293] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20408.630716] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20408.637139] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20408.643562] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20408.649986] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20408.656409] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20408.662832] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20408.669255] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20408.675678] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20408.682101] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20408.688524] mmc1: sdhci: Host ctl2: 0x00000000
+[20408.692952] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20408.700068] mmc1: sdhci: ============================================
+[20408.713083] mmcblk1: error -110 requesting status
+[20408.717847] mmcblk1: recovery failed!
+[20408.721562] print_req_error: I/O error, dev mmcblk1, sector 15013528
+[20418.833204] mmc1: Timeout waiting for hardware interrupt.
+[20418.838597] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20418.845020] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20418.851442] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20418.857866] mmc1: sdhci: Argument:  0x00e51698 | Trn mode: 0x0000003b
+[20418.864289] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20418.870712] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20418.877135] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20418.883558] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20418.889982] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20418.896405] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20418.902828] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20418.909251] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20418.915674] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20418.922097] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20418.928520] mmc1: sdhci: Host ctl2: 0x00000000
+[20418.932948] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20418.940064] mmc1: sdhci: ============================================
+[20418.952930] mmcblk1: error -110 requesting status
+[20418.957635] mmcblk1: recovery failed!
+[20418.961305] print_req_error: I/O error, dev mmcblk1, sector 15013528
+[20429.073203] mmc1: Timeout waiting for hardware interrupt.
+[20429.078593] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20429.085016] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20429.091438] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20429.097862] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20429.104285] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20429.110708] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20429.117131] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20429.123554] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20429.129978] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20429.136401] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20429.142824] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20429.149247] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20429.155670] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20429.162094] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20429.168516] mmc1: sdhci: Host ctl2: 0x00000000
+[20429.172944] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20429.180060] mmc1: sdhci: ============================================
+[20429.193001] mmcblk1: error -110 requesting status
+[20429.197713] mmcblk1: recovery failed!
+[20429.201384] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20439.313199] mmc1: Timeout waiting for hardware interrupt.
+[20439.318589] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20439.325012] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20439.331434] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20439.337858] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20439.344281] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20439.350704] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20439.357127] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20439.363550] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20439.369974] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20439.376397] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20439.382820] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20439.389243] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20439.395667] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20439.402090] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20439.408512] mmc1: sdhci: Host ctl2: 0x00000000
+[20439.412940] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20439.420056] mmc1: sdhci: ============================================
+[20439.432932] mmcblk1: error -110 requesting status
+[20439.437700] mmcblk1: recovery failed!
+[20439.441392] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20449.553199] mmc1: Timeout waiting for hardware interrupt.
+[20449.558585] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20449.565007] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20449.571431] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20449.577854] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20449.584277] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20449.590700] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20449.597123] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20449.603546] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20449.609970] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20449.616393] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20449.622816] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20449.629239] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20449.635662] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20449.642086] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20449.648508] mmc1: sdhci: Host ctl2: 0x00000000
+[20449.652936] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20449.660053] mmc1: sdhci: ============================================
+[20449.672921] mmcblk1: error -110 requesting status
+[20449.677628] mmcblk1: recovery failed!
+[20449.681297] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20459.793196] mmc1: Timeout waiting for hardware interrupt.
+[20459.798590] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20459.805012] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20459.811435] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20459.817859] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20459.824282] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20459.830705] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20459.837128] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20459.843551] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20459.849974] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20459.856398] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20459.862821] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20459.869244] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20459.875667] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20459.882091] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20459.888513] mmc1: sdhci: Host ctl2: 0x00000000
+[20459.892941] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20459.900057] mmc1: sdhci: ============================================
+[20459.912936] mmcblk1: error -110 requesting status
+[20459.917686] mmcblk1: recovery failed!
+[20459.921369] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20470.033194] mmc1: Timeout waiting for hardware interrupt.
+[20470.038586] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20470.045008] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20470.051431] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20470.057855] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20470.064278] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20470.070701] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20470.077124] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20470.083547] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20470.089970] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20470.096393] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20470.102817] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20470.109240] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20470.115663] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20470.122086] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20470.128509] mmc1: sdhci: Host ctl2: 0x00000000
+[20470.132937] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20470.140053] mmc1: sdhci: ============================================
+[20470.152956] mmcblk1: error -110 requesting status
+[20470.157691] mmcblk1: recovery failed!
+[20470.161356] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20480.273193] mmc1: Timeout waiting for hardware interrupt.
+[20480.278582] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20480.285004] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20480.291427] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20480.297851] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20480.304274] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20480.310697] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20480.317120] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20480.323543] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20480.329967] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20480.336390] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20480.342813] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20480.349236] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20480.355659] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20480.362083] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20480.368505] mmc1: sdhci: Host ctl2: 0x00000000
+[20480.372933] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20480.380049] mmc1: sdhci: ============================================
+[20480.392959] mmcblk1: error -110 requesting status
+[20480.397668] mmcblk1: recovery failed!
+[20480.401334] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20490.513190] mmc1: Timeout waiting for hardware interrupt.
+[20490.518578] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20490.525000] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20490.531423] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20490.537847] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20490.544270] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20490.550693] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20490.557116] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20490.563539] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20490.569962] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20490.576386] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20490.582809] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20490.589232] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20490.595655] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20490.602078] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20490.608501] mmc1: sdhci: Host ctl2: 0x00000000
+[20490.612929] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20490.620045] mmc1: sdhci: ============================================
+[20490.632958] mmcblk1: error -110 requesting status
+[20490.637691] mmcblk1: recovery failed!
+[20490.641357] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20500.753187] mmc1: Timeout waiting for hardware interrupt.
+[20500.758574] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20500.764996] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20500.771419] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20500.777843] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20500.784266] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20500.790689] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20500.797112] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20500.803535] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20500.809959] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20500.816382] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20500.822805] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20500.829228] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20500.835651] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20500.842074] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20500.848497] mmc1: sdhci: Host ctl2: 0x00000000
+[20500.852925] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20500.860042] mmc1: sdhci: ============================================
+[20500.872946] mmcblk1: error -110 requesting status
+[20500.877706] mmcblk1: recovery failed!
+[20500.881428] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20510.993186] mmc1: Timeout waiting for hardware interrupt.
+[20510.998579] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20511.005001] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20511.011424] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20511.017847] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20511.024271] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20511.030694] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20511.037117] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20511.043540] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20511.049963] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20511.056387] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20511.062810] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20511.069233] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20511.075656] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20511.082080] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20511.088502] mmc1: sdhci: Host ctl2: 0x00000000
+[20511.092930] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20511.100046] mmc1: sdhci: ============================================
+[20511.113002] mmcblk1: error -110 requesting status
+[20511.117727] mmcblk1: recovery failed!
+[20511.121415] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20521.233184] mmc1: Timeout waiting for hardware interrupt.
+[20521.238575] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20521.244997] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20521.251420] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20521.257844] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20521.264267] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20521.270690] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20521.277113] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20521.283536] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20521.289959] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20521.296382] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20521.302806] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20521.309229] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20521.315652] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20521.322075] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20521.328498] mmc1: sdhci: Host ctl2: 0x00000000
+[20521.332926] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20521.340042] mmc1: sdhci: ============================================
+[20521.352950] mmcblk1: error -110 requesting status
+[20521.357680] mmcblk1: recovery failed!
+[20521.361380] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20531.473220] mmc1: Timeout waiting for hardware interrupt.
+[20531.478606] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20531.485028] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20531.491451] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20531.497874] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20531.504297] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20531.510720] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20531.517144] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20531.523567] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20531.529990] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20531.536413] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20531.542836] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20531.549260] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20531.555683] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20531.562106] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20531.568529] mmc1: sdhci: Host ctl2: 0x00000000
+[20531.572957] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20531.580073] mmc1: sdhci: ============================================
+[20531.592957] mmcblk1: error -110 requesting status
+[20531.597689] mmcblk1: recovery failed!
+[20531.601430] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20541.713180] mmc1: Timeout waiting for hardware interrupt.
+[20541.718567] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20541.724990] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20541.731412] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20541.737836] mmc1: sdhci: Argument:  0x00e51000 | Trn mode: 0x0000003b
+[20541.744259] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20541.750682] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20541.757105] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20541.763528] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20541.769952] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20541.776375] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20541.782798] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20541.789221] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20541.795644] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20541.802068] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20541.808490] mmc1: sdhci: Host ctl2: 0x00000000
+[20541.812918] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20541.820034] mmc1: sdhci: ============================================
+[20541.832903] mmcblk1: error -110 requesting status
+[20541.837634] mmcblk1: recovery failed!
+[20541.841325] print_req_error: I/O error, dev mmcblk1, sector 15011840
+[20551.953176] mmc1: Timeout waiting for hardware interrupt.
+[20551.958563] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20551.964986] mmc1: sdhci: Sys addr:  0x00000010 | Version:  0x00001002
+[20551.971408] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000010
+[20551.977832] mmc1: sdhci: Argument:  0x00e50bf0 | Trn mode: 0x0000003b
+[20551.984255] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20551.990678] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20551.997101] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20552.003524] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20552.009947] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20552.016370] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20552.022794] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20552.029217] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20552.035641] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20552.042064] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20552.048486] mmc1: sdhci: Host ctl2: 0x00000000
+[20552.052914] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20552.060030] mmc1: sdhci: ============================================
+[20552.072904] mmcblk1: error -110 requesting status
+[20552.077670] mmcblk1: recovery failed!
+[20552.081362] print_req_error: I/O error, dev mmcblk1, sector 15010800
+[20562.193174] mmc1: Timeout waiting for hardware interrupt.
+[20562.198568] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20562.204990] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20562.211413] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20562.217836] mmc1: sdhci: Argument:  0x00e50bf0 | Trn mode: 0x0000003b
+[20562.224259] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20562.230682] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20562.237106] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20562.243529] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20562.249952] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20562.256375] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20562.262799] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20562.269222] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20562.275645] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20562.282068] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20562.288491] mmc1: sdhci: Host ctl2: 0x00000000
+[20562.292919] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20562.300035] mmc1: sdhci: ============================================
+[20562.312940] mmcblk1: error -110 requesting status
+[20562.317728] mmcblk1: recovery failed!
+[20562.321434] print_req_error: I/O error, dev mmcblk1, sector 15010800
+[20572.433174] mmc1: Timeout waiting for hardware interrupt.
+[20572.438564] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20572.444986] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20572.451409] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20572.457833] mmc1: sdhci: Argument:  0x00e50bf0 | Trn mode: 0x0000003b
+[20572.464256] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20572.470679] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20572.477102] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20572.483525] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20572.489948] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20572.496371] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20572.502795] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20572.509218] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20572.515641] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20572.522064] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20572.528487] mmc1: sdhci: Host ctl2: 0x00000000
+[20572.532915] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20572.540031] mmc1: sdhci: ============================================
+[20572.553011] mmcblk1: error -110 requesting status
+[20572.557746] mmcblk1: recovery failed!
+[20572.561413] print_req_error: I/O error, dev mmcblk1, sector 15010800
+[20582.673170] mmc1: Timeout waiting for hardware interrupt.
+[20582.678560] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20582.684982] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20582.691405] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20582.697829] mmc1: sdhci: Argument:  0x00e50bf0 | Trn mode: 0x0000003b
+[20582.704252] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20582.710675] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20582.717098] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20582.723521] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20582.729944] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20582.736367] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20582.742791] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20582.749214] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20582.755637] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20582.762060] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20582.768483] mmc1: sdhci: Host ctl2: 0x00000000
+[20582.772911] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20582.780027] mmc1: sdhci: ============================================
+[20582.792919] mmcblk1: error -110 requesting status
+[20582.797687] mmcblk1: recovery failed!
+[20582.801373] print_req_error: I/O error, dev mmcblk1, sector 15010800
+[20592.913170] mmc1: Timeout waiting for hardware interrupt.
+[20592.918556] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20592.924978] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20592.931401] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20592.937824] mmc1: sdhci: Argument:  0x00e50bf0 | Trn mode: 0x0000003b
+[20592.944248] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20592.950671] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20592.957094] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20592.963517] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20592.969941] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20592.976363] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20592.982787] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20592.989210] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20592.995633] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20593.002056] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20593.008479] mmc1: sdhci: Host ctl2: 0x00000000
+[20593.012907] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20593.020023] mmc1: sdhci: ============================================
+[20593.032924] mmcblk1: error -110 requesting status
+[20593.037671] mmcblk1: recovery failed!
+[20593.041335] print_req_error: I/O error, dev mmcblk1, sector 15010800
+[20603.153167] mmc1: Timeout waiting for hardware interrupt.
+[20603.158560] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20603.164983] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20603.171406] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20603.177829] mmc1: sdhci: Argument:  0x00e50bf0 | Trn mode: 0x0000003b
+[20603.184252] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20603.190675] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20603.197099] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20603.203522] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20603.209945] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20603.216368] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20603.222792] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20603.229215] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20603.235638] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20603.242061] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20603.248484] mmc1: sdhci: Host ctl2: 0x00000000
+[20603.252912] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20603.260028] mmc1: sdhci: ============================================
+[20603.273266] mmcblk1: error -110 requesting status
+[20603.278032] mmcblk1: recovery failed!
+[20603.281722] print_req_error: I/O error, dev mmcblk1, sector 15010800
+[20613.393164] mmc1: Timeout waiting for hardware interrupt.
+[20613.398557] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20613.404979] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20613.411402] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20613.417825] mmc1: sdhci: Argument:  0x00e50bf0 | Trn mode: 0x0000003b
+[20613.424248] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20613.430671] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20613.437095] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20613.443518] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20613.449941] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20613.456364] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20613.462787] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20613.469211] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20613.475634] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20613.482057] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20613.488480] mmc1: sdhci: Host ctl2: 0x00000000
+[20613.492908] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20613.500024] mmc1: sdhci: ============================================
+[20613.512861] mmcblk1: error -110 requesting status
+[20613.517622] mmcblk1: recovery failed!
+[20613.521310] print_req_error: I/O error, dev mmcblk1, sector 15010800
+[20623.633164] mmc1: Timeout waiting for hardware interrupt.
+[20623.638553] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20623.644975] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20623.651398] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20623.657821] mmc1: sdhci: Argument:  0x00e50bf0 | Trn mode: 0x0000003b
+[20623.664244] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20623.670667] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20623.677090] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20623.683514] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20623.689937] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20623.696360] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20623.702784] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20623.709207] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20623.715630] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20623.722053] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20623.728476] mmc1: sdhci: Host ctl2: 0x00000000
+[20623.732904] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20623.740020] mmc1: sdhci: ============================================
+[20623.753095] mmcblk1: error -110 requesting status
+[20623.757849] mmcblk1: recovery failed!
+[20623.761572] print_req_error: I/O error, dev mmcblk1, sector 15010800
+[20633.873161] mmc1: Timeout waiting for hardware interrupt.
+[20633.878549] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20633.884971] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20633.891394] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20633.897817] mmc1: sdhci: Argument:  0x00e50bf0 | Trn mode: 0x0000003b
+[20633.904240] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20633.910664] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20633.917087] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20633.923510] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20633.929933] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20633.936356] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20633.942780] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20633.949203] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20633.955626] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20633.962049] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20633.968471] mmc1: sdhci: Host ctl2: 0x00000000
+[20633.972900] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20633.980016] mmc1: sdhci: ============================================
+[20633.993147] mmcblk1: error -110 requesting status
+[20633.997911] mmcblk1: recovery failed!
+[20634.001597] print_req_error: I/O error, dev mmcblk1, sector 15010800
+[20644.113160] mmc1: Timeout waiting for hardware interrupt.
+[20644.118554] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20644.124976] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20644.131399] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20644.137822] mmc1: sdhci: Argument:  0x00e50bf0 | Trn mode: 0x0000003b
+[20644.144245] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20644.150668] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20644.157091] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20644.163515] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20644.169938] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20644.176361] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20644.182784] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20644.189207] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20644.195631] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20644.202054] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20644.208476] mmc1: sdhci: Host ctl2: 0x00000000
+[20644.212905] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20644.220021] mmc1: sdhci: ============================================
+[20644.232872] mmcblk1: error -110 requesting status
+[20644.237613] mmcblk1: recovery failed!
+[20644.241280] print_req_error: I/O error, dev mmcblk1, sector 15010800
+[20705.553148] mmc1: Timeout waiting for hardware interrupt.
+[20705.558538] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20705.564961] mmc1: sdhci: Sys addr:  0x000000f8 | Version:  0x00001002
+[20705.571384] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x000000f8
+[20705.577807] mmc1: sdhci: Argument:  0x03601f00 | Trn mode: 0x0000003b
+[20705.584230] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20705.590653] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20705.597077] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20705.603500] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20705.609923] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20705.616346] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20705.622769] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20705.629193] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20705.635616] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20705.642039] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20705.648461] mmc1: sdhci: Host ctl2: 0x00000000
+[20705.652889] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20705.660006] mmc1: sdhci: ============================================
+[20705.672862] mmcblk1: error -110 requesting status
+[20705.677571] mmcblk1: recovery failed!
+[20705.681254] print_req_error: I/O error, dev mmcblk1, sector 56631040
+[20705.687659] EXT4-fs error (device mmcblk1p2): __ext4_get_inode_loc:4666: inode #1715670: block 6816509: comm bash: unable to read itable block
+[20715.793185] mmc1: Timeout waiting for hardware interrupt.
+[20715.798578] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20715.805001] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20715.811423] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20715.817847] mmc1: sdhci: Argument:  0x00200800 | Trn mode: 0x0000002b
+[20715.824270] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20715.830693] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20715.837116] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20715.843539] mmc1: sdhci: Timeout:   0x00000009 | Int stat: 0x00000000
+[20715.849962] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20715.856385] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20715.862809] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20715.869232] mmc1: sdhci: Cmd:       0x0000193a | Max curr: 0x00000000
+[20715.875655] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20715.882078] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20715.888501] mmc1: sdhci: Host ctl2: 0x00000000
+[20715.892929] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20715.900045] mmc1: sdhci: ============================================
+[20715.912892] mmcblk1: error -110 requesting status
+[20715.917600] mmcblk1: recovery failed!
+[20715.921278] print_req_error: I/O error, dev mmcblk1, sector 2099200
+[20715.927532] Buffer I/O error on dev mmcblk1p2, logical block 0, lost sync page write
+[20715.935301] EXT4-fs (mmcblk1p2): I/O error while writing superblock
+[20726.033141] mmc1: Timeout waiting for hardware interrupt.
+[20726.038530] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20726.044953] mmc1: sdhci: Sys addr:  0x00000100 | Version:  0x00001002
+[20726.051376] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000100
+[20726.057799] mmc1: sdhci: Argument:  0x03601b08 | Trn mode: 0x0000003b
+[20726.064222] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20726.070645] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20726.077069] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20726.083492] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20726.089915] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20726.096338] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20726.102762] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20726.109185] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20726.115608] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20726.122031] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20726.128453] mmc1: sdhci: Host ctl2: 0x00000000
+[20726.132881] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20726.139998] mmc1: sdhci: ============================================
+[20726.152861] mmcblk1: error -110 requesting status
+[20726.157560] mmcblk1: recovery failed!
+[20726.161244] print_req_error: I/O error, dev mmcblk1, sector 56630024
+[20726.167648] EXT4-fs error (device mmcblk1p2): __ext4_get_inode_loc:4666: inode #1713627: block 6816381: comm bash: unable to read itable block
+[20736.273141] mmc1: Timeout waiting for hardware interrupt.
+[20736.278526] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20736.284949] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20736.291372] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20736.297795] mmc1: sdhci: Argument:  0x00200800 | Trn mode: 0x0000002b
+[20736.304218] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20736.310642] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20736.317065] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20736.323488] mmc1: sdhci: Timeout:   0x00000009 | Int stat: 0x00000000
+[20736.329911] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20736.336334] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20736.342757] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20736.349181] mmc1: sdhci: Cmd:       0x0000193a | Max curr: 0x00000000
+[20736.355604] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20736.362027] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20736.368450] mmc1: sdhci: Host ctl2: 0x00000000
+[20736.372878] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20736.379994] mmc1: sdhci: ============================================
+[20736.392861] mmcblk1: error -110 requesting status
+[20736.397595] mmcblk1: recovery failed!
+[20736.401265] print_req_error: I/O error, dev mmcblk1, sector 2099200
+[20736.407526] Buffer I/O error on dev mmcblk1p2, logical block 0, lost sync page write
+[20736.415433] EXT4-fs (mmcblk1p2): I/O error while writing superblock
+[20746.513140] mmc1: Timeout waiting for hardware interrupt.
+[20746.518531] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20746.524954] mmc1: sdhci: Sys addr:  0x000000f8 | Version:  0x00001002
+[20746.531377] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x000000f8
+[20746.537800] mmc1: sdhci: Argument:  0x03601f00 | Trn mode: 0x0000003b
+[20746.544223] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20746.550646] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20746.557070] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20746.563493] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20746.569916] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20746.576339] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20746.582762] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20746.589185] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20746.595609] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20746.602032] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20746.608454] mmc1: sdhci: Host ctl2: 0x00000000
+[20746.612882] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20746.619999] mmc1: sdhci: ============================================
+[20746.632843] mmcblk1: error -110 requesting status
+[20746.637548] mmcblk1: recovery failed!
+[20746.641237] print_req_error: I/O error, dev mmcblk1, sector 56631040
+[20746.647993] EXT4-fs error (device mmcblk1p2): __ext4_get_inode_loc:4666: inode #1715663: block 6816508: comm bash: unable to read itable block
+[20756.753139] mmc1: Timeout waiting for hardware interrupt.
+[20756.758527] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20756.764950] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20756.771373] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20756.777796] mmc1: sdhci: Argument:  0x00200800 | Trn mode: 0x0000002b
+[20756.784219] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20756.790642] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20756.797065] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20756.803489] mmc1: sdhci: Timeout:   0x00000009 | Int stat: 0x00000000
+[20756.809912] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20756.816335] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20756.822758] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20756.829181] mmc1: sdhci: Cmd:       0x0000193a | Max curr: 0x00000000
+[20756.835605] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20756.842028] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20756.848450] mmc1: sdhci: Host ctl2: 0x00000000
+[20756.852878] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20756.859995] mmc1: sdhci: ============================================
+[20756.872874] mmcblk1: error -110 requesting status
+[20756.877582] mmcblk1: recovery failed!
+[20756.881256] print_req_error: I/O error, dev mmcblk1, sector 2099200
+[20756.887516] Buffer I/O error on dev mmcblk1p2, logical block 0, lost sync page write
+[20756.895288] EXT4-fs (mmcblk1p2): I/O error while writing superblock
+[20766.993136] mmc1: Timeout waiting for hardware interrupt.
+[20766.998523] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20767.004946] mmc1: sdhci: Sys addr:  0x00000108 | Version:  0x00001002
+[20767.011369] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000108
+[20767.017792] mmc1: sdhci: Argument:  0x03601c00 | Trn mode: 0x0000003b
+[20767.024215] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20767.030639] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20767.037061] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20767.043485] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20767.049908] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20767.056331] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20767.062754] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20767.069178] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20767.075601] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20767.082024] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20767.088446] mmc1: sdhci: Host ctl2: 0x00000000
+[20767.092874] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20767.099991] mmc1: sdhci: ============================================
+[20767.112857] mmcblk1: error -110 requesting status
+[20767.117628] mmcblk1: recovery failed!
+[20767.121346] print_req_error: I/O error, dev mmcblk1, sector 56630272
+[20767.127877] EXT4-fs error (device mmcblk1p2): __ext4_get_inode_loc:4666: inode #1713947: block 6816401: comm bash: unable to read itable block
+[20777.233133] mmc1: Timeout waiting for hardware interrupt.
+[20777.238519] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20777.244942] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20777.251365] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20777.257788] mmc1: sdhci: Argument:  0x00200800 | Trn mode: 0x0000002b
+[20777.264211] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20777.270634] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20777.277057] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20777.283481] mmc1: sdhci: Timeout:   0x00000009 | Int stat: 0x00000000
+[20777.289904] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20777.296327] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20777.302750] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20777.309173] mmc1: sdhci: Cmd:       0x0000193a | Max curr: 0x00000000
+[20777.315597] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20777.322020] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20777.328442] mmc1: sdhci: Host ctl2: 0x00000000
+[20777.332871] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20777.339987] mmc1: sdhci: ============================================
+[20777.352873] mmcblk1: error -110 requesting status
+[20777.357593] mmcblk1: recovery failed!
+[20777.361283] print_req_error: I/O error, dev mmcblk1, sector 2099200
+[20777.367578] Buffer I/O error on dev mmcblk1p2, logical block 0, lost sync page write
+[20777.375348] EXT4-fs (mmcblk1p2): I/O error while writing superblock
+[20787.473133] mmc1: Timeout waiting for hardware interrupt.
+[20787.478524] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20787.484947] mmc1: sdhci: Sys addr:  0x00000070 | Version:  0x00001002
+[20787.491370] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000070
+[20787.497793] mmc1: sdhci: Argument:  0x03601408 | Trn mode: 0x0000003b
+[20787.504216] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20787.510639] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20787.517062] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20787.523485] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20787.529909] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20787.536332] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20787.542755] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20787.549178] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20787.555601] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20787.562025] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20787.568447] mmc1: sdhci: Host ctl2: 0x00000000
+[20787.572875] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20787.579991] mmc1: sdhci: ============================================
+[20787.592967] mmcblk1: error -110 requesting status
+[20787.597695] mmcblk1: recovery failed!
+[20787.601378] print_req_error: I/O error, dev mmcblk1, sector 56628232
+[20797.713130] mmc1: Timeout waiting for hardware interrupt.
+[20797.718520] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20797.724943] mmc1: sdhci: Sys addr:  0x00000080 | Version:  0x00001002
+[20797.731366] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000080
+[20797.737789] mmc1: sdhci: Argument:  0x03601480 | Trn mode: 0x0000003b
+[20797.744212] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20797.750635] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20797.757058] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20797.763482] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x00000000
+[20797.769905] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20797.776328] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20797.782751] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20797.789174] mmc1: sdhci: Cmd:       0x0000123a | Max curr: 0x00000000
+[20797.795597] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20797.802021] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20797.808443] mmc1: sdhci: Host ctl2: 0x00000000
+[20797.812871] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20797.819987] mmc1: sdhci: ============================================
+[20797.832844] mmcblk1: error -110 requesting status
+[20797.837556] mmcblk1: recovery failed!
+[20797.841228] print_req_error: I/O error, dev mmcblk1, sector 56628352
+[20797.847715] EXT4-fs error (device mmcblk1p2): __ext4_get_inode_loc:4666: inode #1709850: block 6816145: comm bash: unable to read itable block
+[20807.953129] mmc1: Timeout waiting for hardware interrupt.
+[20807.958516] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[20807.964939] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[20807.971362] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[20807.977785] mmc1: sdhci: Argument:  0x00200800 | Trn mode: 0x0000002b
+[20807.984208] mmc1: sdhci: Present:   0x01f70001 | Host ctl: 0x00000019
+[20807.990631] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[20807.997054] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[20808.003478] mmc1: sdhci: Timeout:   0x00000009 | Int stat: 0x00000000
+[20808.009901] mmc1: sdhci: Int enab:  0x02ff008b | Sig enab: 0x02ff008b
+[20808.016324] mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+[20808.022747] mmc1: sdhci: Caps:      0x31e8c881 | Caps_1:   0x00002007
+[20808.029170] mmc1: sdhci: Cmd:       0x0000193a | Max curr: 0x00000000
+[20808.035594] mmc1: sdhci: Resp[0]:   0x00ff8000 | Resp[1]:  0x00000000
+[20808.042017] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00ff8000
+[20808.048439] mmc1: sdhci: Host ctl2: 0x00000000
+[20808.052867] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x000000006fc4e200
+[20808.059984] mmc1: sdhci: ============================================
+[20808.072878] mmcblk1: error -110 requesting status
+[20808.077599] mmcblk1: recovery failed!
+[20808.081274] print_req_error: I/O error, dev mmcblk1, sector 2099200
+[20808.087580] Buffer I/O error on dev mmcblk1p2, logical block 0, lost sync page write
+[20808.095371] EXT4-fs (mmcblk1p2): I/O error while writing superblock
