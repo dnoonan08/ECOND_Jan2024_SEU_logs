@@ -1,0 +1,9 @@
+Run,Hexacontroller,eRx_00_errors,eRx_01_errors,eRx_02_errors,eRx_03_errors,eRx_04_errors,eRx_05_errors,eRx_06_errors,eRx_07_errors,eRx_08_errors,eRx_09_errors,eRx_10_errors,eRx_11_errors,eTx_00_errors,eTx_01_errors,eTx_02_errors,eTx_03_errors,eTx_04_errors,eTx_05_errors
+17_PRBS,42,3,11,3,6,4,4,5,6,7,3,3,3,2,1,1,0,4,1
+18_PRBS,42,9,2,4,5,7,9,3,5,8,5,11,7,3,1,3,2,2,0
+19_PRBS,42,6,2,7,1,3,3,9,7,7,4,4,9,2,0,2,3,5,2
+22_PRBS,42,3,1,2,3,1,1,0,1,0,2,0,3,0,0,0,0,1,1
+17_PRBS,43,5,1,5,5,4,6,5,6,10,7,6,5,3,3,1,0,3,2
+18_PRBS,43,8,13,2,2,4,5,4,7,6,2,0,7,4,2,2,5,2,1
+19_PRBS,43,1,5,2,5,2,5,2,4,2,7,3,2,2,2,2,2,3,2
+22_PRBS,43,1,0,3,1,1,1,1,2,1,0,1,0,1,0,1,0,0,1
