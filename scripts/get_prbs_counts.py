@@ -10,6 +10,7 @@ hexacontrollers = [42,43]
 errorCountLists=[]
 hexaData={}
 regNames = None
+error_data = []
 for hexaNumber in hexacontrollers:
     hexa = f'hexa{hexaNumber}'
     hexaDataFiles = glob.glob(f'../logs/{hexa}/Run*PRBS*json')
@@ -29,9 +30,15 @@ for hexaNumber in hexacontrollers:
 
             data_diffs=np.array(data['tests'][2]['metadata']['daq_asic_post_beam'])
             modes=stats.mode(data_diffs,axis=1)[0]
-            prbs_errs_output = (data_diffs!=modes)
-            prbs_errs_output = prbs_errs_output.sum(axis=0)
+            prbs_errs_output = (data_diffs!=modes).sum(axis=0)
+            lineHasErr=(data_diffs!=modes).any(axis=1)
 
+            data_w_err = np.vectorize(lambda x: f'{x:032b}')(data_diffs[lineHasErr])
+            bit_diff = np.vectorize(lambda x: f'{x:032b}')(np.bitwise_xor(data_diffs,modes)[lineHasErr])
+
+            nbitsDiff=np.vectorize(lambda x: x.count('1'))(bit_diff).sum(axis=1)
+            N=data_w_err.shape[0]
+            error_data.append(np.concatenate((np.array([runNum,hexaNumber]*N).reshape(N,-1),data_w_err,bit_diff,nbitsDiff.reshape(N,-1)),axis=1))
             #####
             ## try to implement logic to detect wrap arounds
             ##    this isn't observed at all, only one possible i2c error (all 0 outputs for one reading) so ignore for now
@@ -55,3 +62,8 @@ df=pd.DataFrame(errorCountLists)
 df.columns=['Run','Hexacontroller']+[f'eRx_{i:02d}_errors' for i in range(12)]+[f'eTx_{i:02d}_errors' for i in range(6)]
 
 df.to_csv('../data/prbs_error_counts_by_run.csv',index=False)
+
+df2=pd.DataFrame(np.concatenate(error_data))
+df2.columns=['Run','Hexacontroller']+[f'PRBS_data_eTx{i}' for i in range(6)] + [f'BitDiff_eRx{i}' for i in range(6)]+['nBitsDiff']
+
+df2.to_csv('../data/prbs_link_capture_errors.csv',index=False)
