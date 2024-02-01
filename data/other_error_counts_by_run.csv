@@ -22,7 +22,6 @@ Run,Hexacontroller,FCtrl_Global_lock_count,FCtrl_Global_unassigned_fcmd_count,FC
 18_PRBS,42,1,0,0,0,0,0,0,0,0,0
 19_PRBS,42,1,0,0,0,0,0,0,0,0,0
 20_ZSzeros,42,1,0,0,0,0,0,0,0,0,0
-20_ZSzeros,42,1,0,0,0,0,0,0,0,0,0
 21_ZSones,42,1,0,0,0,0,0,0,0,0,0
 22_PRBS,42,1,0,0,0,0,0,0,0,0,0
 01,43,1,0,0,0,0,0,0,0,0,0
@@ -47,7 +46,6 @@ Run,Hexacontroller,FCtrl_Global_lock_count,FCtrl_Global_unassigned_fcmd_count,FC
 17_PRBS,43,1,0,0,0,0,0,0,0,0,0
 18_PRBS,43,1,0,0,0,0,0,0,0,0,0
 19_PRBS,43,1,0,0,0,0,0,0,0,0,0
-20_ZSzeros,43,1,0,0,0,0,0,0,0,0,0
 20_ZSzeros,43,1,0,0,0,0,0,0,0,0,0
 21_ZSones,43,1,0,0,0,0,0,0,0,0,0
 22_PRBS,43,1,0,0,0,0,0,0,0,0,0
