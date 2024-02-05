@@ -22,7 +22,7 @@ for hexaNumber in hexacontrollers:
 
     for fname in fileNames:
         print(fname)
-        runNum=re.findall('Run_(\w*)_test',fname)[0]
+        runNum=re.findall('Run_(\w*)_test',fname)[0].split('_')[0]
         data=json.load(open(fname))
         #beam-on test is second in list if it is a PRBS test, 3rd if not
         testNumber = 2 if 'PRBS' in fname else 3
