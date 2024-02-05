@@ -7,7 +7,10 @@ import re
 hexacontrollers = [42,43]
 
 def countsTotal(x):
-    rollOvers=(x[1:]-x[:-1]<0).sum(axis=0)
+    #if all registers are identically zero, this is likely an I2C NACK, not actually a rollover
+    allZeros = (x[1:]==0).all(axis=1).reshape(-1,1)
+    rollOvers = ((x[1:]-x[:-1])<0)
+    rollOvers = (rollOvers & ~allZeros).sum(axis=0)
     return rollOvers*256 + x[-1]
 
 errorCountLists=[]
